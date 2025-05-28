@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QFEY - Quantum Research</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.module.min.js"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <!-- <div class="logo">
+                <div class="logo-symbol">
+                    <i class="fas fa-atom" style="color: var(--primary);"></i>
+                </div>
+                <div class="logo-text">QFEY</div>
+            </div> -->
+            <a href="./index.html" class="logo-link">
+                <div class="logo">
+                    <div class="logo-symbol">
+                        <i class="fas fa-atom" style="color: var(--primary);"></i>
+                    </div>
+                    <div class="logo-text">QFEY</div>
+                </div>
+            </a>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-items">
+                <a href="./index.html" class="nav-item">Home</a> 
+                <a href="./qresearch.html" class="nav-item">QResearch</a>
+                <a href="#" class="nav-item">QScribe</a>
+                <a href="#" class="nav-item">Qbits</a>
+                <a href="#" class="nav-item">About</a>
+                <a href="#connect" class="nav-item">Connect</a>
+            </div>
+        </nav>
+        
+        <section class="hero quantum-gravity-hero"> <canvas id="spacetime-canvas"></canvas> <div class="hero-content">
+                <h1 class="hero-title">Quantum Research</h1>
+                <h2 class="hero-subtitle" id="animated-subtitle">Time . Loop</h2>
+            </div>
+        </section>
+
+        <section class="research-domains">
+            <h2 class="section-title">Research</h2>
+            <div class="research-buttons">
+                <button class="research-btn active" data-area="Quantum">Quantum</button>
+                <button class="research-btn" data-area="Systems">Q Learning</button>
+            </div>
+
+            <div class="research-content">
+                <div class="research-info">
+                    <div class="research-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 class="research-title">Quantum Research</h3>
+                    <p class="research-description">Quantum Algorithms to solve complex computation problem</p>
+                    <div class="key-focus">
+                        <h4>Key Focus Areas:</h4>
+                        <ul class="focus-list">
+                            <li><i class="fas fa-microchip"></i></i>Quantum Algorithms</li>
+                            <li><i class="fas fa-shield-alt"></i></i>Quantum Error Correction</li>
+                            <li><i class="fas fa-code-branch"></i></i>Quantum-Classical Integration</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="computational-insights" id="quantum-insights">
+                    <h4 class="insights-title">Computational Insights</h4>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <i class="fas fa-infinity"></i>
+                            <p>Reality Processing Power</p>
+                            <div class="insight-value"><span class="counter" data-target="42">0</span> Dimensions</div>
+                        </div>
+                        <div class="insight-card">
+                            <i class="fas fa-dice-d20"></i>
+                            <p>State Complexity</p>
+                            <div class="insight-value"><span class="counter" data-target="525">0</span> Paradigms</div>
+                        </div>
+                        <div class="insight-card">
+                            <i class="fas fa-globe-americas"></i>
+                            <p>Multiverse</p>
+                            <div class="insight-value"><span class="counter" data-target="128">0</span> Dimensions</div>
+                        </div>
+                        <div class="insight-card">
+                            <i class="fas fa-wave-square"></i>
+                            <p>Quantum Tunneling</p>
+                            <div class="insight-value"><span class="counter" data-target="1024">0</span> States</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="research-info hidden" id="systems-info">
+                    <div class="research-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="research-title">Q Learning</h3>
+                    <p class="research-description">Systems that learn and adapt through quantum principles</p>
+                    <div class="key-focus">
+                        <h4>Key Focus Areas:</h4>
+                        <ul class="focus-list">
+                            <li><i class="fas fa-robot"></i>Quantum Reinforcement Learning</li>
+                            <li><i class="fas fa-network-wired"></i>Adaptive Systems</li>
+                            <li><i class="fas fa-brain"></i>Quantum Neural Networks</li>
+                        </ul>
+                    </div>
+                </div>   -->
+
+                <div class="research-info hidden" id="systems-info">
+                    <div class="research-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="research-title">Q Learning</h3>
+                    <p class="research-description">Systems that learn and adapt through quantum principles</p>
+                    <div class="key-focus">
+                        <h4>Key Focus Areas:</h4>
+                        <ul class="focus-list">
+                            <li><i class="fas fa-robot"></i>Quantum Reinforcement Learning</li>
+                            <li><i class="fas fa-network-wired"></i>Adaptive Systems</li>
+                            <li><i class="fas fa-brain"></i>Quantum Neural Networks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="computational-insights hidden" id="systems-insights">
+                    <h4 class="insights-title">Metrics</h4>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <i class="fas fa-sync-alt"></i>
+                            <div class="insight-value">
+                                <span class="counter" data-target="99.99">0</span>%
+                            </div>
+                            <p>System Uptime</p>
+                        </div>
+                        <div class="insight-card">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <div class="insight-value">
+                                <span class="counter" data-target="85">0</span>%
+                            </div>
+                            <p>Resource Optimization</p>
+                        </div>
+                        <div class="insight-card">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="insight-value">
+                                <span class="counter" data-target="95">0</span>%
+                            </div>
+                            <p>Prediction Accuracy</p>
+                        </div>
+                        <div class="insight-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="insight-value">
+                                <span class="counter" data-target="92">0</span>%
+                            </div>
+                            <p>System Resilience</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section id="connect" class="connect-section">
+            <div class="connect-container">
+                <h2 class="connect-title">Connect</h2>
+                <p class="connect-description">
+                    Questions on my research?
+                </p>
+                <div class="connect-email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:qfey@icloud.com" class="email-link">qfey@icloud.com</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="secret-teaser">
+            <i class="fas fa-key"></i>
+        </div>
+
+        <div class="scrollToTop-btn flex-center">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+
+        <div class="secret-modal">
+            <div class="secret-content">
+                <div class="secret-close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="secret-badge">Classified</div>
+                <h3 class="secret-title">Quantum Enigma Awaits</h3>
+                <div class="terminal-effect">
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-text">Initializing quantum protocol...</span>
+                    </div>
+                </div>
+                <p class="secret-description">
+                    You've discovered something special. A realm where quantum computing theory meets practical application. Apply quantum algorithms to solve puzzles, correct quantum errors in simulated systems, and bridge classical-quantum integration challenges.
+                </p>
+                <p class="secret-description">
+                    <strong>Coordinates received:</strong> Access the quantum realm when you're ready. The challenge awaits those who can harness superposition and entanglement to overcome computational barriers.
+                </p>
+                <button class="cta-btn primary-btn">Accept Challenge</button>
+            </div>
+        </div>
+
+       <footer class="footer">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Contact</a>
+            </div>
+            <p class="copyright">© 2025 QFEY,  A  <a href="https://qubitai.in/" target="_blank" class="footer-link">QubitAI </a> Creation. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="./js/qresearch.js"></script>
+</body>
+</html>
