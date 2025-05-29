@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - QFEY Quantum AI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.module.min.js"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css"> 
+</head>
+<body>
+    <div class="container-wrapper"> <nav>
+            <a href="./index.html" class="logo-link">
+                <div class="logo">
+                    <div class="logo-symbol">
+                        <i class="fas fa-atom" style="color: var(--primary);"></i>
+                    </div>
+                    <div class="logo-text">QFEY</div>
+                </div>
+            </a>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-items">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="qresearch.html" class="nav-item">Research</a>
+                <a href="about.html" class="nav-item active">About</a> <a href="#connect" class="nav-item">Connect</a>
+                <a href="#" class="nav-item">Explore</a>
+            </div>
+        </nav>
+
+        <section class="hero about-hero">
+            <canvas id="about-canvas"></canvas> <div class="hero-content">
+                <h1 class="hero-title">Beyond the Horizon</h1>
+                <p class="hero-subtitle" id="animated-subtitle">Innovating at the Quantum Edge of AI</p>
+                <a href="#our-story" class="cta-btn primary-btn scroll-down">Learn More <i class="fas fa-chevron-down"></i></a>
+            </div>
+        </section>
+
+        <section id="our-story" class="about-section story-section">
+            <div class="container"> <h2 class="section-title">Our Genesis: The QFEY Story</h2>
+                <div class="story-grid">
+                    <div class="story-text">
+                        <p>At QFEY, we believe the future of intelligence lies at the intersection of quantum mechanics and artificial intelligence. Founded in [Year], our journey began with a vision to transcend conventional computational limits and unlock unparalleled capabilities for solving humanity's most complex challenges.</p>
+                        <p>Our multidisciplinary team of quantum physicists, AI engineers, and data scientists are united by a singular passion: to forge a new era of innovation where impossible problems become solvable. From pioneering quantum algorithms to developing ethical AI frameworks, we are committed to responsible and groundbreaking technological advancement.</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="https://placehold.co/600x400/121212/e0e0e0?text=QFEY+Story" alt="Our Team Brainstorming" class="img-fluid">
+                        <p class="image-caption">Early conceptualizations at the crossroads of quantum and AI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section mission-vision-section">
+            <div class="container">
+                <div class="vision-card">
+                    <i class="fas fa-eye fa-3x gradient-icon"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be the vanguard of Quantum AI, shaping a future where intelligent systems operate with unprecedented efficiency, security, and ethical integrity across all dimensions of human endeavor.</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-rocket fa-3x gradient-icon"></i>
+                    <h3>Our Mission</h3>
+                    <p>To deliver transformative Quantum AI solutions that empower industries, accelerate scientific discovery, and create a positive, profound impact on society, pushing the boundaries of what's computationally possible.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section values-section">
+            <div class="container">
+                <h2 class="section-title">Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-item" data-value="Innovation">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Innovation</h4>
+                        <p class="value-description">We relentlessly pursue groundbreaking ideas, challenging the status quo to redefine what's possible in Quantum AI.</p>
+                    </div>
+                    <div class="value-item" data-value="Integrity">
+                        <i class="fas fa-hands-helping"></i>
+                        <h4>Integrity</h4>
+                        <p class="value-description">We operate with transparency, honesty, and a steadfast commitment to ethical AI development and deployment.</p>
+                    </div>
+                    <div class="value-item" data-value="Collaboration">
+                        <i class="fas fa-users"></i>
+                        <h4>Collaboration</h4>
+                        <p class="value-description">We foster a culture of shared knowledge and diverse perspectives, believing true breakthroughs emerge from collective brilliance.</p>
+                    </div>
+                    <div class="value-item" data-value="Excellence">
+                        <i class="fas fa-trophy"></i>
+                        <h4>Excellence</h4>
+                        <p class="value-description">We are dedicated to achieving the highest standards in our research, development, and delivery of solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section expertise-section">
+            <div class="container">
+                <h2 class="section-title">Our Expertise: Diving Deep</h2>
+                <div class="expertise-tabs">
+                    <div class="expertise-tab active" data-tech="quantum-computing">Quantum Computing</div>
+                    <div class="expertise-tab" data-tech="machine-learning">Machine Learning</div>
+                    <div class="expertise-tab" data-tech="ethical-ai">Ethical AI</div>
+                </div>
+                <div class="expertise-content">
+                    <div id="quantum-computing-content" class="expertise-details">
+                        <h3>Quantum Computing</h3>
+                        <p>Leveraging superposition and entanglement for computational leaps:</p>
+                        <ul>
+                            <li><i class="fas fa-atom"></i>Quantum Algorithm Development</li>
+                            <li><i class="fas fa-network-wired"></i>Quantum Cryptography Solutions</li>
+                            <li><i class="fas fa-code"></i>Qubit Optimization</li>
+                        </ul>
+                        <div class="expertise-visual">
+                            <img src="https://placehold.co/600x300/121212/e0e0e0?text=Quantum+Computing+Diagram" alt="Quantum Computing Diagram">
+                        </div>
+                    </div>
+                    <div id="machine-learning-content" class="expertise-details hidden">
+                        <h3>Advanced Machine Learning</h3>
+                        <p>Building intelligent systems that learn, adapt, and predict:</p>
+                        <ul>
+                            <li><i class="fas fa-brain"></i>Deep Learning Architectures</li>
+                            <li><i class="fas fa-chart-line"></i>Predictive Analytics</li>
+                            <li><i class="fas fa-robot"></i>Reinforcement Learning for Complex Systems</li>
+                        </ul>
+                        <div class="expertise-visual">
+                            <img src="https://placehold.co/600x300/121212/e0e0e0?text=Machine+Learning+Diagram" alt="Machine Learning Diagram">
+                        </div>
+                    </div>
+                    <div id="ethical-ai-content" class="expertise-details hidden">
+                        <h3>Ethical AI & Governance</h3>
+                        <p>Ensuring AI development is responsible, fair, and transparent:</p>
+                        <ul>
+                            <li><i class="fas fa-balance-scale"></i>Fairness & Bias Mitigation</li>
+                            <li><i class="fas fa-user-shield"></i>Privacy-Preserving AI</li>
+                            <li><i class="fas fa-book"></i>AI Explainability (XAI)</li>
+                        </ul>
+                        <div class="expertise-visual">
+                            <img src="https://placehold.co/600x300/121212/e0e0e0?text=Ethical+AI+Concepts" alt="Ethical AI Concepts">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="connect" class="connect-section">
+            <div class="connect-container">
+                <h2 class="connect-title">Connect With Us</h2>
+                <p class="connect-description">
+                    Have questions about quantum computing, quantum gravity, or interested in collaborating on research? We'd love to hear from you.
+                </p>
+                <div class="connect-email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:qfey@icloud.com" class="email-link">qfey@icloud.com</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="secret-teaser">
+            <i class="fas fa-key"></i>
+        </div>
+
+        <div class="scrollToTop-btn flex-center">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+
+        <div class="secret-modal">
+            <div class="secret-content">
+                <div class="secret-close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="secret-badge">Classified</div>
+                <h3 class="secret-title">Quantum Enigma Awaits</h3>
+                <div class="terminal-effect">
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-text">Initializing quantum protocol...</span>
+                    </div>
+                </div>
+                <p class="secret-description">
+                    You've discovered something special. A realm where quantum computing theory meets practical application. Apply quantum algorithms to solve puzzles, correct quantum errors in simulated systems, and bridge classical-quantum integration challenges.
+                </p>
+                <p class="secret-description">
+                    <strong>Coordinates received:</strong> Access the quantum realm when you're ready. The challenge awaits those who can harness superposition and entanglement to overcome computational barriers.
+                </p>
+                <button class="cta-btn primary-btn">Accept Challenge</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Contact</a>
+                <a href="https://www.qubitai.com" target="_blank" class="footer-link">QubitAI</a> 
+            </div>
+            <p class="copyright">© 2025 QFEY & <a href="https://www.qubitai.com" target="_blank" class="footer-link">QubitAI</a>.</p>
+        </footer>
+    </div> <script type="module" src="js/about.js"></script> 
+    <script type="module" src="js/main.js"></script> 
+</body>
+</html>
