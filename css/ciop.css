@@ -1,0 +1,254 @@
+
+    /* Additional styles for CIOP page */
+    .ciop-hero {
+        background: radial-gradient(circle at 20% 80%, rgba(0, 110, 255, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(7, 241, 163, 0.1) 0%, transparent 50%);
+    }
+
+    .coming-soon {
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        background: rgba(0, 110, 255, 0.1);
+        border: 1px solid var(--primary);
+        border-radius: 50px;
+        color: var(--primary);
+        font-weight: 600;
+        margin-top: 1.5rem;
+    }
+
+    .ciop-overview {
+        padding: 6rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .overview-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        margin-top: 4rem;
+    }
+
+    .overview-card {
+        background: var(--surface);
+        padding: 2.5rem;
+        border-radius: 1rem;
+        border-left: 4px solid var(--primary);
+    }
+
+    .overview-card h3 {
+        color: var(--primary);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .overview-card p {
+        line-height: 1.6;
+        color: var(--text);
+    }
+
+    .tech-stack {
+        background: var(--surface);
+        padding: 6rem 2rem;
+    }
+
+    .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 4rem auto 0;
+    }
+
+    .tech-card {
+        background: var(--background);
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .tech-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 110, 255, 0.1);
+    }
+
+    .tech-icon {
+        font-size: 3rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+    }
+
+    .progress-section {
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+
+    .roadmap {
+        max-width: 800px;
+        margin: 4rem auto 0;
+    }
+
+    .roadmap-item {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: var(--surface);
+        border-radius: 1rem;
+        position: relative;
+    }
+
+    .roadmap-status {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .status-complete {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: var(--background);
+    }
+
+    .status-progress {
+        background: rgba(0, 110, 255, 0.2);
+        border: 2px solid var(--primary);
+        color: var(--primary);
+    }
+
+    .status-planned {
+        background: rgba(128, 128, 128, 0.2);
+        border: 2px solid #666;
+        color: #666;
+    }
+
+    .roadmap-content {
+        text-align: left;
+    }
+
+    .roadmap-content h4 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .roadmap-content p {
+        color: var(--text);
+        font-size: 1.2rem;
+    }
+
+    .architecture-diagram {
+        background: var(--background);
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 3rem auto;
+        max-width: 800px;
+        border: 1px solid rgba(0, 110, 255, 0.2);
+    }
+
+    .diagram-flow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .flow-node {
+        background: var(--surface);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        flex: 1;
+        min-width: 120px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .flow-node:hover {
+        border-color: var(--primary);
+        transform: scale(1.05);
+    }
+
+    .flow-arrow {
+        color: var(--primary);
+        font-size: 1.5rem;
+    }
+
+    .core-components-section {
+        padding: 6rem 2rem;
+        background: var(--background);
+    }
+
+    .components-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .component-card {
+        background: var(--surface);
+        border-radius: 1rem;
+        padding: 3rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 110, 255, 0.1);
+    }
+
+    .component-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 110, 255, 0.15);
+        border-color: var(--primary);
+    }
+
+    .component-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        margin: 0 auto 2rem;
+        font-size: 2rem;
+        color: var(--background);
+    }
+
+    .component-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 1rem;
+    }
+
+    .component-subtitle {
+        font-size: 1.2rem;
+        color: var(--secondary);
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+
+    .component-description {
+        color: var(--text);
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+
+
+    @media (max-width: 768px) {
+        .diagram-flow {
+            flex-direction: column;
+        }
+        
+        .flow-arrow {
+            transform: rotate(90deg);
+        }
+    }

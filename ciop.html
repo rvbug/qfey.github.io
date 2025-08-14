@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-32x32.png">
+    <title>CIOP — Cognitive Interaction Optimization Platform</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.module.min.js"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/ciop.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="./index.html" class="logo-link">
+                <div class="logo">
+                    <div class="logo-symbol">
+                        <i class="fas fa-atom" style="color: var(--primary);"></i>
+                    </div>
+                    <div class="logo-text">QFEY</div>
+                </div>
+            </a>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-items">
+                <a href="./index.html" class="nav-item">Home</a> 
+                <a href="./qresearch.html" class="nav-item">QResearch</a>
+                <a href="./ciop.html" class="nav-item active">CIOP</a>
+                <a href="#" class="nav-item">QScribe</a>
+                <a href="#" class="nav-item">Qbits</a>
+                <!-- <a href="#" class="nav-item">About</a> -->
+                <a href="#connect" class="nav-item">Connect</a>
+            </div>
+        </nav>
+
+        <main>
+            <section class="hero ciop-hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">CIOP</h1>
+                    <h2 class="hero-subtitle">Cognitive Interaction Optimization Platform</h2>
+                    <!-- <p class="hero-description">Real-time reinforcement learning for human-computer interaction optimization through adaptive cognitive workflows.</p> -->
+                    <div class="coming-soon">
+                        <i class="fas fa-rocket"></i> Development in Progress
+                    </div>
+                </div>
+            </section>
+
+            <section class="ciop-overview">
+                <h2 class="hero-title" style="text-align: center; font-size: 3.5rem; margin-bottom: 2rem;">The Platform</h2>
+                <p style="text-align: center; font-size: 2.1rem; color: var(--text); max-width: 800px; margin: 0 auto;">
+                    Real-time RL Cognitive Workflows.
+                </p>
+
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3><i class="fas fa-brain"></i> Cognitive Intelligence</h3>
+                        <p>Adapt to user behavior patterns</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3><i class="fas fa-sync-alt"></i> Real-time Adaptation</h3>
+                        <p>Dynamic system optimization for maximum efficiency.</p>
+                    </div>
+                    <!-- <div class="overview-card">
+                        <h3><i class="fas fa-network-wired"></i> Distributed Processing</h3>
+                        <p>Cloud-native architecture enabling seamless scaling and processing of complex cognitive tasks across distributed computing environments.</p>
+                    </div> -->
+                </div>
+            </section>
+
+            <section class="core-components-section">
+                <h2 class="hero-title" style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem;">Components</h2>
+                <div class="components-grid">
+                    <div class="component-card">
+                        <div class="component-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="component-title">COWI</h3>
+                        <h4 class="component-subtitle">Cognitive Optimization Workflow Intelligence</h4>
+                        <!-- <p class="component-description">Optimization engine to streamline cognitive processes.</p> -->
+                    </div>
+                    <div class="component-card">
+                        <div class="component-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="component-title">ACON</h3>
+                        <h4 class="component-subtitle">Autonomous Command Optimization Network</h4>
+                        <!-- <p class="component-description">Intelligent command processing system.</p> -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section class="tech-stack">
+                <div style="text-align: center;">
+                    <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Technology Stack</h2>
+                    <p style="color: var(--text); font-size: 1.1rem;">Built with cutting-edge technologies for optimal performance and scalability</p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon"><i class="fas fa-robot"></i></div>
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Machine Learning</h4>
+                        <p style="color: var(--text); font-size: 0.9rem;">PyTorch, TensorFlow, Reinforcement Learning Algorithms</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon"><i class="fas fa-cloud"></i></div>
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Cloud Architecture</h4>
+                        <p style="color: var(--text); font-size: 0.9rem;">Kubernetes, Docker, Microservices, Auto-scaling</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon"><i class="fas fa-database"></i></div>
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Data Processing</h4>
+                        <p style="color: var(--text); font-size: 0.9rem;">Apache Kafka, Redis, Time-series Databases</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon"><i class="fas fa-lock"></i></div>
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Security</h4>
+                        <p style="color: var(--text); font-size: 0.9rem;">End-to-end Encryption, Zero-trust Architecture</p>
+                    </div>
+                </div>
+            </section> -->
+
+            <section class="progress-section">
+                <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Roadmap</h2>
+                <p style="color: var(--text); font-size: 1.6rem;">Current progress and upcoming milestones</p>
+
+                <div class="roadmap">
+                    <div class="roadmap-item">
+                        <div class="roadmap-status status-complete">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="roadmap-content">
+                            <h4>Foundation & Research</h4>
+                            <p>Feasibility studies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-item">
+                        <div class="roadmap-status status-progress">
+                            <i class="fas fa-cog fa-spin"></i>
+                        </div>
+                        <div class="roadmap-content">
+                            <h4>Prototyping</h4>
+                            <p>Early RL environment setup.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-item">
+                        <div class="roadmap-status status-planned">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="roadmap-content">
+                            <h4>Multiple Domains</h4>
+                            <p>Real-time events streaming.</p>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-item">
+                        <div class="roadmap-status status-planned">
+                            <i class="fa-solid fa-code-merge"></i>
+                            <!-- <i class="fa-solid fa-integral"></i> -->
+                        </div>
+                        <div class="roadmap-content">
+                            <h4>Integration</h4>
+                            <p>Policy integration for live adaptation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-item">
+                        <div class="roadmap-status status-planned">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="roadmap-content">
+                            <h4>Testing</h4>
+                            <p>Multi-domain benchmarking tests.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="enigma-section">
+                <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 2rem;">System Architecture</h2>
+                
+                <div class="architecture-diagram">
+                    <div class="diagram-flow">
+                        <div class="flow-node">
+                            <i class="fas fa-user" style="color: var(--primary); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                            <h4 style="color: var(--primary); margin-bottom: 0.5rem;">User Input</h4>
+                            <p style="color: var(--text); font-size: 0.8rem;">Interaction Data</p>
+                        </div>
+                        
+                        <div class="flow-arrow">→</div>
+                        
+                        <div class="flow-node">
+                            <i class="fas fa-brain" style="color: var(--secondary); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                            <h4 style="color: var(--primary); margin-bottom: 0.5rem;">COWI</h4>
+                            <p style="color: var(--text); font-size: 0.8rem;">Pattern Analysis</p>
+                        </div>
+                        
+                        <div class="flow-arrow">→</div>
+                        
+                        <div class="flow-node">
+                            <i class="fas fa-network-wired" style="color: var(--primary); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                            <h4 style="color: var(--primary); margin-bottom: 0.5rem;">ACON</h4>
+                            <p style="color: var(--text); font-size: 0.8rem;">Command Optimization</p>
+                        </div>
+                        
+                        <div class="flow-arrow">→</div>
+                        
+                        <div class="flow-node">
+                            <i class="fas fa-magic" style="color: var(--secondary); font-size: 2rem; margin-bottom: 0.5rem;"></i>
+                            <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Optimized UX</h4>
+                            <p style="color: var(--text); font-size: 0.8rem;">Enhanced Interface</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="connect" class="connect-section">
+                <div class="connect-container">
+                    <h2 class="connect-title">Interested in CIOP?</h2>
+                    <p class="connect-description">
+                        Get updates on development progress and be among the first to access the platform when it launches.
+                    </p>
+                    <div class="connect-email">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:qfey@icloud.com" class="email-link">qfey@icloud.com</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="secret-teaser">
+            <i class="fas fa-key"></i>
+        </div>
+
+        <div class="scrollToTop-btn flex-center">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+
+        <div class="secret-modal">
+            <div class="secret-content">
+                <div class="secret-close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="secret-badge">Classified</div>
+                <h3 class="secret-title">Quantum Entanglement</h3>
+                <div class="terminal-effect">
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-text">Initializing...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Contact</a>
+            </div>
+            <p class="copyright">© 2025 QFEY, A <a href="https://qubitai.in/" target="_blank" class="footer-link">QubitAI </a> Creation. All rights reserved.</p>
+        </footer>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
