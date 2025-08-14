@@ -216,6 +216,7 @@ nav.scrolled {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    /* margin-top: 2rem; */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s forwards 1.2s;
@@ -230,6 +231,39 @@ nav.scrolled {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+
+/* Add this CSS to fix the spacing issues */
+
+/* CIOP section - Add space between cards and button */
+#ciop .cta-buttons {
+    margin-top: 3rem;
+}
+
+/* Quantum Computing section - Complete override */
+#quantum-computing-research {
+    margin-bottom: 0 !important; /* Remove all bottom margin */
+    padding-bottom: 4rem; /* Use padding instead */
+}
+
+#quantum-computing-research .cta-buttons {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 10; /* Ensure button stays in its section */
+}
+
+/* Connect section - Add top margin to create separation */
+#connect {
+    margin-top: 4rem; /* Create space above Connect section */
+    padding-top: 3rem; /* Reduce from 6rem */
+    padding-bottom: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+
 
 .primary-btn {
     background: linear-gradient(to right, var(--primary), var(--secondary));
@@ -337,7 +371,7 @@ nav.scrolled {
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem; /* Updated value to increase the space */
     /* Add some space between sections */
 }
 
@@ -666,7 +700,8 @@ nav.scrolled {
 }
 
 .connect-section {
-    padding: 6rem 2rem;
+    padding: 3rem 2rem;
+    padding-bottom: 6rem;
     background-color: var(--surface);
     text-align: center;
     position: relative;
