@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: _site
+  output-dir: ../qscribe-blog
 website:
   title: "QFey"
   site-url: https://qfey.in/qscribe
