@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: ../qbits-notes
+
+website:
+  title: "QFey"
+  site-url: https://qfey.in/qbits
+  navbar:
+    right:
+      - text: Home
+        href: ../index.html
+      - text: About
+        href: https://qubitai.in/about.html
+        target: _blank
+      - text: Blogs
+        href: https://qfey.in/qscribe-blog/  
+      - icon: github
+        href: https://github.com/rvbug
+        target: _blank
+      - icon: globe
+        href: https://qubitai.in/
+        target: _blank
+      - text: QFey
+        href: https://qfey.in/
+        target: _blank
+
+format:
+  html:
+    css: 
+      - https://qfey.in/css/style.css
+      - "css/blog-override.css"
+
