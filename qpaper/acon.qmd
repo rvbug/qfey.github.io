@@ -76,7 +76,7 @@ nvim main.rs
 
 This requires:
 
- - keystrokes: $\approx 30$ [typing all commands including spaces]
+ - keystrokes: $\approx 29$ [typing all commands including spaces]
  - Mental Ops: $\approx 2$  [recall dir names, deciding sequence cd -> mkdir -> cd -> nvim ]
  - System Response: $\approx 3$ [return key after each command and wait time to finish]
 
@@ -263,7 +263,7 @@ CIOP is implemented in a hybrid architecture:
 
 ## 6.1 Folder structure
 ```markdown
-acon
+ciop
 ├── agent
 │   ├── cli_agent/
 │   ├── meta_agent/
@@ -294,8 +294,6 @@ Options:
   -h, --help     Print help
   -V, --version  Print version
 ```
-
-![](/images/ciop-start-log.png){height=220}
 
 ## 6.3 TOML Extensible configuration 
 
@@ -346,11 +344,8 @@ printf "%s\t%s\t%s\t%s\n" "$TS" "$PWD" "$RET" "$CMD_B64" >> ~/.cli_command_buffe
 }  
 ```
 
-```bash
+```json
 👀 Tailing cli events from data/rl_event_pipe
-{"data":{"command":"ll","cwd":"/projects/ciop/logger","exit_code":0,
-"keystroke_count":2,"session_id":1,"time":"2022-09-17T10:22:48.159270Z"},
-"source":"cli"}
 {"event": "suggestion_accepted", "suggestion_id": "ae2516bc", "source": "cli", "text": "pwd", "cwd": "ciop/logger", "seen": true, "accepted": true, "timestamp": "2025-09-17T03:42:22.603479Z", "keystrokes": 3, "mental_ops": 1, "predicted_time": 2.04}
 {"event": "q_update", "source": "cli", "state": "/Users/rv/Documents/projects/ciop/logger", "action": "pwd", "reward": 1.0, "old_q": 1.0, "new_q": 1.0, "count": 6, "timestamp": "2025-09-17T03:42:22.604159Z", "keystrokes": 3, "mental_ops": 1, "predicted_time": 2.04}
 {"cwd":"ciop/logger","event":"command_seen","exit_code":0,"keystrokes":14,"source":"cli","text":"bandit-suggest","timestamp":"2025-09-17T03:42:24.467725+00:00"}
@@ -562,6 +557,21 @@ num_suggestions     : 30
 
 ## 7.12 KLM Daily
 ![](./images/klm_time_D.png)
+
+## 7.13 Final Calculations 
+
+Based on the above examples, here's the table showing the Scenarios vs savings. 
+
+```markdown
+
+| Scenarios         | k  | n | m | Time (s) | Savings |
+|-------------------|----|---|---|----------|---------|
+| Manual            | 29 | 2 | 3 | 11.4     | -       | 
+| Bandit suggestion | 23 | 1 | 1 | 7.9      | 31%     | 
+| Future composite  | 17 | 1 | 1 | 6.2      | 58%     |
+
+```
+
 
 # 8. Discussion
 

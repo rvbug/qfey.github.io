@@ -39,7 +39,7 @@
     "href": "acon.html#baseline-workflow-calculations",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
     "section": "3.1 Baseline workflow & Calculations:",
-    "text": "3.1 Baseline workflow & Calculations:\ncd logger\ncd src\nnvim main.rs\nThis requires:\n\nkeystrokes: \\(\\approx 30\\) [typing all commands including spaces]\nMental Ops: \\(\\approx 2\\) [recall dir names, deciding sequence cd -&gt; mkdir -&gt; cd -&gt; nvim ]\nSystem Response: \\(\\approx 3\\) [return key after each command and wait time to finish]\n\n\\(T_{manual} = (29 \\times 0.28) + (2 \\times 1.2) + (3 \\times 0.3) \\approx 8.4 + 2.4 + 0.9 \\approx 11.4s\\)"
+    "text": "3.1 Baseline workflow & Calculations:\ncd logger\ncd src\nnvim main.rs\nThis requires:\n\nkeystrokes: \\(\\approx 29\\) [typing all commands including spaces]\nMental Ops: \\(\\approx 2\\) [recall dir names, deciding sequence cd -&gt; mkdir -&gt; cd -&gt; nvim ]\nSystem Response: \\(\\approx 3\\) [return key after each command and wait time to finish]\n\n\\(T_{manual} = (29 \\times 0.28) + (2 \\times 1.2) + (3 \\times 0.3) \\approx 8.4 + 2.4 + 0.9 \\approx 11.4s\\)"
   },
   {
     "objectID": "acon.html#ciop-suggestions-savings",
@@ -81,7 +81,7 @@
     "href": "acon.html#folder-structure",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
     "section": "6.1 Folder structure",
-    "text": "6.1 Folder structure\nacon\n├── agent\n│   ├── cli_agent/\n│   ├── meta_agent/\n├── Cargo.toml\n├── logger\n│   └── src/\n│   ├── data/\n│   ├── logger.toml\n│   ├── Cargo.toml\n├── script.sh\n├── README.md"
+    "text": "6.1 Folder structure\nciop\n├── agent\n│   ├── cli_agent/\n│   ├── meta_agent/\n├── Cargo.toml\n├── logger\n│   └── src/\n│   ├── data/\n│   ├── logger.toml\n│   ├── Cargo.toml\n├── script.sh\n├── README.md"
   },
   {
     "objectID": "acon.html#cli-and-arguments",
@@ -109,7 +109,7 @@
     "href": "acon.html#events-rl_event_pipe.",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
     "section": "6.5 Events rl_event_pipe.",
-    "text": "6.5 Events rl_event_pipe.\n    if Path::new(pipe_path).exists() {\n        match OpenOptions::new()\n            .write(true)\n            .custom_flags(libc::O_NONBLOCK) // don’t block if no reader\n            .open(pipe_path)\n        {\n            Ok(mut pipe) =&gt; {\n                if let Err(e) = writeln!(pipe, \"{}\", json_str) {\n                    if e.kind() != std::io::ErrorKind::BrokenPipe {\n                eprintln!(\"Failed to write to pipe: {}\", e);\n            }\n    ...\n}  \n👀 Tailing cli events from data/rl_event_pipe\n{\"data\":{\"command\":\"ll\",\"cwd\":\"/projects/ciop/logger\",\"exit_code\":0,\n\"keystroke_count\":2,\"session_id\":1,\"time\":\"2022-09-17T10:22:48.159270Z\"},\n\"source\":\"cli\"}\n{\"event\": \"suggestion_accepted\", \"suggestion_id\": \"ae2516bc\", \"source\": \"cli\", \"text\": \"pwd\", \"cwd\": \"ciop/logger\", \"seen\": true, \"accepted\": true, \"timestamp\": \"2025-09-17T03:42:22.603479Z\", \"keystrokes\": 3, \"mental_ops\": 1, \"predicted_time\": 2.04}\n{\"event\": \"q_update\", \"source\": \"cli\", \"state\": \"/Users/rv/Documents/projects/ciop/logger\", \"action\": \"pwd\", \"reward\": 1.0, \"old_q\": 1.0, \"new_q\": 1.0, \"count\": 6, \"timestamp\": \"2025-09-17T03:42:22.604159Z\", \"keystrokes\": 3, \"mental_ops\": 1, \"predicted_time\": 2.04}\n{\"cwd\":\"ciop/logger\",\"event\":\"command_seen\",\"exit_code\":0,\"keystrokes\":14,\"source\":\"cli\",\"text\":\"bandit-suggest\",\"timestamp\":\"2025-09-17T03:42:24.467725+00:00\"}"
+    "text": "6.5 Events rl_event_pipe.\n    if Path::new(pipe_path).exists() {\n        match OpenOptions::new()\n            .write(true)\n            .custom_flags(libc::O_NONBLOCK) // don’t block if no reader\n            .open(pipe_path)\n        {\n            Ok(mut pipe) =&gt; {\n                if let Err(e) = writeln!(pipe, \"{}\", json_str) {\n                    if e.kind() != std::io::ErrorKind::BrokenPipe {\n                eprintln!(\"Failed to write to pipe: {}\", e);\n            }\n    ...\n}  \n👀 Tailing cli events from data/rl_event_pipe\n{\"event\": \"suggestion_accepted\", \"suggestion_id\": \"ae2516bc\", \"source\": \"cli\", \"text\": \"pwd\", \"cwd\": \"ciop/logger\", \"seen\": true, \"accepted\": true, \"timestamp\": \"2025-09-17T03:42:22.603479Z\", \"keystrokes\": 3, \"mental_ops\": 1, \"predicted_time\": 2.04}\n{\"event\": \"q_update\", \"source\": \"cli\", \"state\": \"/Users/rv/Documents/projects/ciop/logger\", \"action\": \"pwd\", \"reward\": 1.0, \"old_q\": 1.0, \"new_q\": 1.0, \"count\": 6, \"timestamp\": \"2025-09-17T03:42:22.604159Z\", \"keystrokes\": 3, \"mental_ops\": 1, \"predicted_time\": 2.04}\n{\"cwd\":\"ciop/logger\",\"event\":\"command_seen\",\"exit_code\":0,\"keystrokes\":14,\"source\":\"cli\",\"text\":\"bandit-suggest\",\"timestamp\":\"2025-09-17T03:42:24.467725+00:00\"}"
   },
   {
     "objectID": "acon.html#python-bandit-agent",
@@ -327,5 +327,19 @@
     "title": "Research Home",
     "section": "",
     "text": "Metric\nValue\n\n\n\n\nTotal Seen\n66\n\n\nTotal Accepted\n6\n\n\nAcceptance Rate (%)\n9.09\n\n\nUnique Actions\n12"
+  },
+  {
+    "objectID": "acon.html#klm",
+    "href": "acon.html#klm",
+    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
+    "section": "7.13 KLM",
+    "text": "7.13 KLM\n\n| Scenarios         | k  | n | m | Time (s) | Calculations              |\n|-------------------|----|---|---|----------|---------------------------|\n| Manual            | 29 | 2 | 3 | 11.4     | 29×0.28+1×1.2+3×0.3=10.22 | \n| Bandit suggestion | 23 | 1 | 1 | 7.9      | 23×0.28+1×1.2+1×0.3=7.94  | \n| Future composite  | 17 | 1 | 1 | 6.2      | 17×0.28+1×1.2+0.3=6.2     |"
+  },
+  {
+    "objectID": "acon.html#final-calculations",
+    "href": "acon.html#final-calculations",
+    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
+    "section": "7.13 Final Calculations",
+    "text": "7.13 Final Calculations\nBased on the above examples, here’s the table showing the Scenarios vs savings.\n\n| Scenarios         | k  | n | m | Time (s) | Savings |\n|-------------------|----|---|---|----------|---------|\n| Manual            | 29 | 2 | 3 | 11.4     | -       | \n| Bandit suggestion | 23 | 1 | 1 | 7.9      | 31%     | \n| Future composite  | 17 | 1 | 1 | 6.2      | 58%     |"
   }
 ]
