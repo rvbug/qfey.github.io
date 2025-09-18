@@ -1,31 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "index.html#autonomous-command-optimization-network-acon",
+    "href": "index.html#autonomous-command-optimization-network-acon",
     "title": "Research Papers",
-    "section": "",
-    "text": "—"
+    "section": "> Autonomous Command Optimization Network (ACON)",
+    "text": "&gt; Autonomous Command Optimization Network (ACON)\n\nv1.0 via Multi-Arm Bandit -  Completed\nv2.0: Advanced Reinforcement Learning - In Progress"
   },
   {
-    "objectID": "index.html#ciop---acon",
-    "href": "index.html#ciop---acon",
+    "objectID": "index.html#cognitive-optimization-workflow-intelligence-ciow",
+    "href": "index.html#cognitive-optimization-workflow-intelligence-ciow",
     "title": "Research Papers",
-    "section": "1. CIOP - ACON",
-    "text": "1. CIOP - ACON\n\nv1.0 - ACON using MAB\nv1.1: Deep Reinforcement Learning - Coming Soon"
-  },
-  {
-    "objectID": "index.html#ciop---ciow",
-    "href": "index.html#ciop---ciow",
-    "title": "Research Papers",
-    "section": "> CIOP - CIOW",
-    "text": "&gt; CIOP - CIOW\n\nv1.0: Practical Implementation - Coming Soon"
-  },
-  {
-    "objectID": "index.html#publication-status",
-    "href": "index.html#publication-status",
-    "title": "Research Papers",
-    "section": "Publication Status",
-    "text": "Publication Status\n\nIn Progress: MAB v1.0 (ArXiv:2025.xxxxx)"
+    "section": "> Cognitive Optimization Workflow Intelligence (CIOW)",
+    "text": "&gt; Cognitive Optimization Workflow Intelligence (CIOW)\n\nv1.0: Practical Implementation - Coming Soon"
   },
   {
     "objectID": "images/metrics_timeseries_H.html",
@@ -49,18 +35,25 @@
     "text": "2.1 KLM Basics\nKLM proposes following six operations. For this version of ACON, we will be disregarding the pointing devices and consider that only keyboard is the input device.\n\nK - Keystroke\nH - Homing hands on keyboard\nM - Mental preparation for action and decision making\nR - System response time. This is unique to the system\n\nEach of the elements has a time associated with it. This paper considers\n\nK - Keystroke by an average typist is \\(\\approx 40 wpm\\) is 0.28s\n\nM - Mental preparation would be \\(\\approx 1.35s\\)\n\nKeystroke-Level Model (KLM) estimates task time as:\n\\[Total ​= \\sum(nk​⋅tk​)+∑(nm​⋅tm​)+∑(nr​⋅tr​)\\]\nWhere:\n\n\\(n_k\\) : number of keystrokes, \\(t_k\\) \\(\\approx\\) 0.28\n\\(n_m\\)​: number of mental operations, \\(t_m\\) \\(\\approx\\) 1.2s\n\\(n_r\\) : number of system responses \\(t_r\\) = \\(\\approx\\) 0.3s"
   },
   {
-    "objectID": "ResearchPaper.html#baseline-workflow",
-    "href": "ResearchPaper.html#baseline-workflow",
+    "objectID": "ResearchPaper.html#baseline-workflow-calculations",
+    "href": "ResearchPaper.html#baseline-workflow-calculations",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "3.1 Baseline workflow:",
-    "text": "3.1 Baseline workflow:\ncd logger\ncd src\nnvim main.rs\n\n3.1.1 Baseline Calculations\nThis requires\n\nkeystrokes: \\(\\approx 30\\) [typing all commands including spaces]\nMental Ops: \\(\\approx 2\\) [recall dir names, deciding sequence cd -&gt; mkdir -&gt; cd -&gt; nvim ]\nSystem Response: \\(\\approx 3\\) [return key after each command and wait time to finish]\n\n\\(T_{manual} = (29 \\times 0.28) + (2 \\times 1.2) + (3 \\times 0.3) \\approx 8.4 + 2.4 + 0.9 \\approx 11.7s\\)"
+    "section": "3.1 Baseline workflow & Calculations:",
+    "text": "3.1 Baseline workflow & Calculations:\ncd logger\ncd src\nnvim main.rs\nThis requires:\n\nkeystrokes: \\(\\approx 30\\) [typing all commands including spaces]\nMental Ops: \\(\\approx 2\\) [recall dir names, deciding sequence cd -&gt; mkdir -&gt; cd -&gt; nvim ]\nSystem Response: \\(\\approx 3\\) [return key after each command and wait time to finish]\n\n\\(T_{manual} = (29 \\times 0.28) + (2 \\times 1.2) + (3 \\times 0.3) \\approx 8.4 + 2.4 + 0.9 \\approx 11.4s\\)"
   },
   {
-    "objectID": "ResearchPaper.html#ciop-suggestion",
-    "href": "ResearchPaper.html#ciop-suggestion",
+    "objectID": "ResearchPaper.html#ciop-suggestions-savings",
+    "href": "ResearchPaper.html#ciop-suggestions-savings",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "3.2 CIOP suggestion:",
-    "text": "3.2 CIOP suggestion:\n# suggested early by bandit as it learns this folder is used frequently.\nnvim logger/src/main.rs\n\\(T_{bandit} = (23 \\times 0.28) + (1 \\times 1.2) + (1 \\times 0.3) \\approx 8.4 + 2.4 + 0.9 \\approx 7.9s\\)\nFor the example:\n\n-   **Baseline:** $T_{total} \\approx 15 \\times 0.28 + 3⋅1.2 \\approx 8.64s$\n\n-   **CIOP suggestion:**  $T_{total} \\approx 8⋅0.28 + 1 \\times 1.2 \\approx 3.44s$\nRoughly  60% Reduction"
+    "section": "3.2 CIOP suggestions & Savings:",
+    "text": "3.2 CIOP suggestions & Savings:\n# suggested early by bandit as it learns this folder is used frequently.\nnvim logger/src/main.rs\n\\(T_{bandit} = (23 \\times 0.28) + (1 \\times 1.2) + (1 \\times 0.3) \\approx 8.4 + 2.4 + 0.9 \\approx 7.9s\\)"
+  },
+  {
+    "objectID": "ResearchPaper.html#final-evaluation",
+    "href": "ResearchPaper.html#final-evaluation",
+    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
+    "section": "3.3 Final Evaluation",
+    "text": "3.3 Final Evaluation\n\nBaseline Value: \\(\\approx 11.4s\\)\nWith CIOP: \\(\\approx 7.9s\\)\n\nRoughly  31% Reduction"
   },
   {
     "objectID": "ResearchPaper.html#ciop-architecture",
@@ -133,88 +126,88 @@
     "text": "7.1 Real-time Rust TUI\nThis is a real time metrics run using\n$&gt; ciop --metrics\n┌ Info ───────────────────────────────────────────────────────────────────────┐\n│Metrics viewer (press 'q' to quit, 'r' to reset)                             │\n└─────────────────────────────────────────────────────────────────────────────┘\n┌Bandit Metrics Summary───────────────────────────────────────────────────────┐\n│Seen: 429   Accepted: 30   AcceptRate: 6.99%   UniqueActions: 20             │\n└─────────────────────────────────────────────────────────────────────────────┘\n┌Keystroke-Level Model (KLM)──────────────────────────────────────────────────┐\n│Manual: 526 keystrokes, 54 mental, 54 sys → 228.28s                          │\n└─────────────────────────────────────────────────────────────────────────────┘\n┌Recent Metrics───────────────────────────────────────────────────────────────┐\n│2025-09-17T15:44:57.586287Z | cli | q_update | -                             │\n│   pwd                                                                       │\n│2025-09-17T15:44:57.586542Z | cli | q_update | -                             │\n│   clear                                                                     │                         \n│2025-09-17T15:44:57.588184Z | cli | command_seen | ciop/agent/cli_agent.     │\n│   clear                                                                     │\n│2025-09-17T15:44:57.588251Z | cli | command_seen | ciop/agent/cli_agent      │\n│ ...                                                                         │\n└─────────────────────────────────────────────────────────────────────────────┘\n┌Raw Log (debug view)──────────────────────────────────────────────────────────┐\n│{\"event\":\"q_update\",\"source\": \"cli\",\"state\": \"ciop/agent/cli_agent\",\"action\"  │\n│{\"event\":\"q_update\",\"source\": \"cli\",\"state\": \"ciop/agent/cli_agent\", \"action\":│\n│{\"event\":\"q_update\",\"source\": \"cli\",\"state\": \"ciop\", \"action\": \"pw\", \"reward\" │\n..."
   },
   {
-    "objectID": "ResearchPaper.html#offline-python-analysis.",
-    "href": "ResearchPaper.html#offline-python-analysis.",
-    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.2 Offline Python analysis.",
-    "text": "7.2 Offline Python analysis."
-  },
-  {
     "objectID": "ResearchPaper.html#acceptance-rate-over-time",
     "href": "ResearchPaper.html#acceptance-rate-over-time",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.3 Acceptance Rate Over Time",
-    "text": "7.3 Acceptance Rate Over Time"
+    "section": "7.2 Acceptance Rate Over Time",
+    "text": "7.2 Acceptance Rate Over Time"
   },
   {
     "objectID": "ResearchPaper.html#unique-actions-learned",
     "href": "ResearchPaper.html#unique-actions-learned",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.4 Unique Actions Learned",
-    "text": "7.4 Unique Actions Learned"
+    "section": "7.3 Unique Actions Learned",
+    "text": "7.3 Unique Actions Learned"
   },
   {
     "objectID": "ResearchPaper.html#q-value-by-action",
     "href": "ResearchPaper.html#q-value-by-action",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.5 Q-Value by Action",
-    "text": "7.5 Q-Value by Action"
+    "section": "7.4 Q-Value by Action",
+    "text": "7.4 Q-Value by Action"
   },
   {
     "objectID": "ResearchPaper.html#final-q-values",
     "href": "ResearchPaper.html#final-q-values",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.6 Final Q-Values",
-    "text": "7.6 Final Q-Values"
+    "section": "7.5 Final Q-Values",
+    "text": "7.5 Final Q-Values"
   },
   {
     "objectID": "ResearchPaper.html#q-value-vs-baseline",
     "href": "ResearchPaper.html#q-value-vs-baseline",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.7 Q-Value vs Baseline",
-    "text": "7.7 Q-Value vs Baseline"
+    "section": "7.6 Q-Value vs Baseline",
+    "text": "7.6 Q-Value vs Baseline"
   },
   {
     "objectID": "ResearchPaper.html#summary-metrics",
     "href": "ResearchPaper.html#summary-metrics",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.8 Summary Metrics",
-    "text": "7.8 Summary Metrics\n| Metric              | Value |\n|---------------------|-------|\n| Total Seen          | 430   |\n| Total Accepted      | 30    |\n| Acceptance Rate (%) | 9.09  |\n| Unique Actions      | 22    |"
+    "section": "7.7 Summary Metrics",
+    "text": "7.7 Summary Metrics\n| Metric              | Value |\n|---------------------|-------|\n| Total Seen          | 430   |\n| Total Accepted      | 30    |\n| Acceptance Rate (%) | 9.09  |\n| Unique Actions      | 22    |"
   },
   {
     "objectID": "ResearchPaper.html#metrics-daily",
     "href": "ResearchPaper.html#metrics-daily",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.9 Metrics (Daily)",
-    "text": "7.9 Metrics (Daily)\n| Time              | Seen | Accepted | Acceptance Rate (%) |\n|-------------------|------|----------|---------------------|\n| 2025-08-28 00:00  | 33   | 3  | 9.09                      |\n...\n| 2025-09-11 00:00  | 33   | 3  | 9.09                      |\n...\n| 2025-09-13 00:00  | 0    | 0  | 0.00                      |\n| 2025-09-14 00:00  | 0    | 0  | 0.00                      |\n| 2025-09-16 00:00  | 196  | 16 | 8.16                      |\n| 2025-09-17 00:00  | 158  | 8  | 5.06                      |\n..."
+    "section": "7.8 Metrics (Daily)",
+    "text": "7.8 Metrics (Daily)\n| Time              | Seen | Accepted | Acceptance Rate (%) |\n|-------------------|------|----------|---------------------|\n| 2025-08-28 00:00  | 33   | 3  | 9.09                      |\n...\n| 2025-09-11 00:00  | 33   | 3  | 9.09                      |\n...\n| 2025-09-13 00:00  | 0    | 0  | 0.00                      |\n| 2025-09-14 00:00  | 0    | 0  | 0.00                      |\n| 2025-09-16 00:00  | 196  | 16 | 8.16                      |\n| 2025-09-17 00:00  | 158  | 8  | 5.06                      |\n..."
   },
   {
     "objectID": "ResearchPaper.html#metrics-hourly",
     "href": "ResearchPaper.html#metrics-hourly",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.10 Metrics (Hourly)",
-    "text": "7.10 Metrics (Hourly)\n\n| Time              | Seen | Accepted | Acceptance Rate (%) |\n|-------------------|------|----------|---------------------|\n| 2025-08-28 07:00 | 33    | 3        | 9.09                |\n| 2025-09-16 00:00 | 0     | 0        | 0.00                |\n| 2025-09-16 04:00 | 44    | 4        | 9.09                |\n...\n| 2025-09-16 05:00 | 53    | 3        | 5.66                |\n| 2025-09-16 06:00 | 22    | 2        | 9.09                |\n| 2025-09-16 07:00 | 77    | 7        | 9.09                |\n| 2025-09-16 23:00 | 0     | 0        | 0.00                |\n...\n| 2025-09-17 02:00 | 43    | 3        | 6.98                |\n| 2025-09-17 03:00 | 95    | 5        | 5.26                |\n| 2025-09-17 05:00 | 20    | 0        | 0.00                |\n..."
+    "section": "7.9 Metrics (Hourly)",
+    "text": "7.9 Metrics (Hourly)\n\n| Time              | Seen | Accepted | Acceptance Rate (%) |\n|-------------------|------|----------|---------------------|\n| 2025-08-28 07:00 | 33    | 3        | 9.09                |\n| 2025-09-16 00:00 | 0     | 0        | 0.00                |\n| 2025-09-16 04:00 | 44    | 4        | 9.09                |\n...\n| 2025-09-16 05:00 | 53    | 3        | 5.66                |\n| 2025-09-16 06:00 | 22    | 2        | 9.09                |\n| 2025-09-16 07:00 | 77    | 7        | 9.09                |\n| 2025-09-16 23:00 | 0     | 0        | 0.00                |\n...\n| 2025-09-17 02:00 | 43    | 3        | 6.98                |\n| 2025-09-17 03:00 | 95    | 5        | 5.26                |\n| 2025-09-17 05:00 | 20    | 0        | 0.00                |\n..."
   },
   {
     "objectID": "ResearchPaper.html#klm-savings",
     "href": "ResearchPaper.html#klm-savings",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.11 KLM Savings",
-    "text": "7.11 KLM Savings\n=== KLM Savings Summary ===\nmanual_total_time   : 155.76\nbandit_total_time   : 52.8\ntime_saved          : 102.96\nnum_manual          : 29\nnum_suggestions     : 30"
+    "section": "7.10 KLM Savings",
+    "text": "7.10 KLM Savings\n=== KLM Savings Summary ===\nmanual_total_time   : 155.76\nbandit_total_time   : 52.8\ntime_saved          : 102.96\nnum_manual          : 29\nnum_suggestions     : 30"
   },
   {
     "objectID": "ResearchPaper.html#klm-hourly",
     "href": "ResearchPaper.html#klm-hourly",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.12 KLM Hourly",
-    "text": "7.12 KLM Hourly"
+    "section": "7.11 KLM Hourly",
+    "text": "7.11 KLM Hourly"
   },
   {
     "objectID": "ResearchPaper.html#klm-daily",
     "href": "ResearchPaper.html#klm-daily",
     "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.13 KLM Daily",
-    "text": "7.13 KLM Daily"
+    "section": "7.12 KLM Daily",
+    "text": "7.12 KLM Daily"
+  },
+  {
+    "objectID": "ResearchPaper.html#related-work-2",
+    "href": "ResearchPaper.html#related-work-2",
+    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
+    "section": "13.1 Related work",
+    "text": "13.1 Related work\nPrevious research on cognitive optimization (Paul Holleis 2025) has shown\n\nKeystroke Level Model MultiArm Bandit\n\nHill, David. 1984. “A Bibliography to Human-Computer Interaction: Concepts, Methods and Problems.” October 1984.\n\n\nPaul Holleis, Heinrich Hussmann, Friederike Otto. 2025. “CIOP ACON.” September 16, 2025. https://dl.acm.org/doi/10.1145/1240624.1240851."
   },
   {
     "objectID": "ciop-v1/Overview.html",
@@ -341,54 +334,5 @@
     "title": "Research Home",
     "section": "",
     "text": "Metric\nValue\n\n\n\n\nTotal Seen\n66\n\n\nTotal Accepted\n6\n\n\nAcceptance Rate (%)\n9.09\n\n\nUnique Actions\n12"
-  },
-  {
-    "objectID": "index.html#ciop---autonomous-command-optimization-network-acon",
-    "href": "index.html#ciop---autonomous-command-optimization-network-acon",
-    "title": "Research Papers",
-    "section": "> CIOP - Autonomous Command Optimization Network (ACON)",
-    "text": "&gt; CIOP - Autonomous Command Optimization Network (ACON)\n\nv1.0 via Multi-Arm Bandit -  Completed\nv2.0: Advanced Reinforcement Learning - In Progress"
-  },
-  {
-    "objectID": "index.html#ciop---cognitive-optimization-workflow-intelligence-ciow",
-    "href": "index.html#ciop---cognitive-optimization-workflow-intelligence-ciow",
-    "title": "Research Papers",
-    "section": "> CIOP - Cognitive Optimization Workflow Intelligence (CIOW)",
-    "text": "&gt; CIOP - Cognitive Optimization Workflow Intelligence (CIOW)\n\nv1.0: Practical Implementation - Coming Soon"
-  },
-  {
-    "objectID": "index.html#autonomous-command-optimization-network-acon",
-    "href": "index.html#autonomous-command-optimization-network-acon",
-    "title": "Research Papers",
-    "section": "> Autonomous Command Optimization Network (ACON)",
-    "text": "&gt; Autonomous Command Optimization Network (ACON)\n\nv1.0 via Multi-Arm Bandit -  Completed\nv2.0: Advanced Reinforcement Learning - In Progress"
-  },
-  {
-    "objectID": "index.html#cognitive-optimization-workflow-intelligence-ciow",
-    "href": "index.html#cognitive-optimization-workflow-intelligence-ciow",
-    "title": "Research Papers",
-    "section": "> Cognitive Optimization Workflow Intelligence (CIOW)",
-    "text": "&gt; Cognitive Optimization Workflow Intelligence (CIOW)\n\nv1.0: Practical Implementation - Coming Soon"
-  },
-  {
-    "objectID": "ResearchPaper.html#baseline-workflow-calculations",
-    "href": "ResearchPaper.html#baseline-workflow-calculations",
-    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "3.1 Baseline workflow & Calculations:",
-    "text": "3.1 Baseline workflow & Calculations:\ncd logger\ncd src\nnvim main.rs\nThis requires:\n\nkeystrokes: \\(\\approx 30\\) [typing all commands including spaces]\nMental Ops: \\(\\approx 2\\) [recall dir names, deciding sequence cd -&gt; mkdir -&gt; cd -&gt; nvim ]\nSystem Response: \\(\\approx 3\\) [return key after each command and wait time to finish]\n\n\\(T_{manual} = (29 \\times 0.28) + (2 \\times 1.2) + (3 \\times 0.3) \\approx 8.4 + 2.4 + 0.9 \\approx 11.4s\\)"
-  },
-  {
-    "objectID": "ResearchPaper.html#ciop-suggestions-savings",
-    "href": "ResearchPaper.html#ciop-suggestions-savings",
-    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "3.2 CIOP suggestions & Savings:",
-    "text": "3.2 CIOP suggestions & Savings:\n# suggested early by bandit as it learns this folder is used frequently.\nnvim logger/src/main.rs\n\\(T_{bandit} = (23 \\times 0.28) + (1 \\times 1.2) + (1 \\times 0.3) \\approx 8.4 + 2.4 + 0.9 \\approx 7.9s\\)"
-  },
-  {
-    "objectID": "ResearchPaper.html#final-evaluation",
-    "href": "ResearchPaper.html#final-evaluation",
-    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "3.3 Final Evaluation",
-    "text": "3.3 Final Evaluation\n\nBaseline Value: \\(\\approx 11.4s\\)\nWith CIOP: \\(\\approx 7.9s\\)\n\nRoughly  31% Reduction"
   }
 ]

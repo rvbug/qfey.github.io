@@ -61,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -252,23 +253,23 @@ window.Quarto = {
   <li><a href="#metrics-analysis" id="toc-metrics-analysis" class="nav-link" data-scroll-target="#metrics-analysis">7. Metrics &amp; Analysis</a>
   <ul class="collapse">
   <li><a href="#real-time-rust-tui" id="toc-real-time-rust-tui" class="nav-link" data-scroll-target="#real-time-rust-tui">7.1 Real-time Rust TUI</a></li>
-  <li><a href="#offline-python-analysis." id="toc-offline-python-analysis." class="nav-link" data-scroll-target="#offline-python-analysis.">7.2 Offline Python analysis.</a></li>
-  <li><a href="#acceptance-rate-over-time" id="toc-acceptance-rate-over-time" class="nav-link" data-scroll-target="#acceptance-rate-over-time">7.3 Acceptance Rate Over Time</a></li>
-  <li><a href="#unique-actions-learned" id="toc-unique-actions-learned" class="nav-link" data-scroll-target="#unique-actions-learned">7.4 Unique Actions Learned</a></li>
-  <li><a href="#q-value-by-action" id="toc-q-value-by-action" class="nav-link" data-scroll-target="#q-value-by-action">7.5 Q-Value by Action</a></li>
-  <li><a href="#final-q-values" id="toc-final-q-values" class="nav-link" data-scroll-target="#final-q-values">7.6 Final Q-Values</a></li>
-  <li><a href="#q-value-vs-baseline" id="toc-q-value-vs-baseline" class="nav-link" data-scroll-target="#q-value-vs-baseline">7.7 Q-Value vs Baseline</a></li>
-  <li><a href="#summary-metrics" id="toc-summary-metrics" class="nav-link" data-scroll-target="#summary-metrics">7.8 Summary Metrics</a></li>
-  <li><a href="#metrics-daily" id="toc-metrics-daily" class="nav-link" data-scroll-target="#metrics-daily">7.9 Metrics (Daily)</a></li>
-  <li><a href="#metrics-hourly" id="toc-metrics-hourly" class="nav-link" data-scroll-target="#metrics-hourly">7.10 Metrics (Hourly)</a></li>
-  <li><a href="#klm-savings" id="toc-klm-savings" class="nav-link" data-scroll-target="#klm-savings">7.11 KLM Savings</a></li>
-  <li><a href="#klm-hourly" id="toc-klm-hourly" class="nav-link" data-scroll-target="#klm-hourly">7.12 KLM Hourly</a></li>
-  <li><a href="#klm-daily" id="toc-klm-daily" class="nav-link" data-scroll-target="#klm-daily">7.13 KLM Daily</a></li>
+  <li><a href="#acceptance-rate-over-time" id="toc-acceptance-rate-over-time" class="nav-link" data-scroll-target="#acceptance-rate-over-time">7.2 Acceptance Rate Over Time</a></li>
+  <li><a href="#unique-actions-learned" id="toc-unique-actions-learned" class="nav-link" data-scroll-target="#unique-actions-learned">7.3 Unique Actions Learned</a></li>
+  <li><a href="#q-value-by-action" id="toc-q-value-by-action" class="nav-link" data-scroll-target="#q-value-by-action">7.4 Q-Value by Action</a></li>
+  <li><a href="#final-q-values" id="toc-final-q-values" class="nav-link" data-scroll-target="#final-q-values">7.5 Final Q-Values</a></li>
+  <li><a href="#q-value-vs-baseline" id="toc-q-value-vs-baseline" class="nav-link" data-scroll-target="#q-value-vs-baseline">7.6 Q-Value vs Baseline</a></li>
+  <li><a href="#summary-metrics" id="toc-summary-metrics" class="nav-link" data-scroll-target="#summary-metrics">7.7 Summary Metrics</a></li>
+  <li><a href="#metrics-daily" id="toc-metrics-daily" class="nav-link" data-scroll-target="#metrics-daily">7.8 Metrics (Daily)</a></li>
+  <li><a href="#metrics-hourly" id="toc-metrics-hourly" class="nav-link" data-scroll-target="#metrics-hourly">7.9 Metrics (Hourly)</a></li>
+  <li><a href="#klm-savings" id="toc-klm-savings" class="nav-link" data-scroll-target="#klm-savings">7.10 KLM Savings</a></li>
+  <li><a href="#klm-hourly" id="toc-klm-hourly" class="nav-link" data-scroll-target="#klm-hourly">7.11 KLM Hourly</a></li>
+  <li><a href="#klm-daily" id="toc-klm-daily" class="nav-link" data-scroll-target="#klm-daily">7.12 KLM Daily</a></li>
   </ul></li>
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">8. Discussion</a></li>
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">9. Limitations:</a></li>
   <li><a href="#roadmap" id="toc-roadmap" class="nav-link" data-scroll-target="#roadmap">10. Roadmap:</a></li>
   <li><a href="#related-work" id="toc-related-work" class="nav-link" data-scroll-target="#related-work">11. Related Work</a></li>
+  <li><a href="#related-work-1" id="toc-related-work-1" class="nav-link" data-scroll-target="#related-work-1">11. Related Work</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">12. Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">13. References</a></li>
   </ul>
@@ -761,32 +762,28 @@ Note
 <span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>│{"event":"q_update","source": "cli","state": "ciop", "action": "pw", "reward" │</span>
 <span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="offline-python-analysis." class="level2">
-<h2 class="anchored" data-anchor-id="offline-python-analysis.">7.2 Offline Python analysis.</h2>
-<p><img src="./images/final_q_values.png" class="img-fluid"></p>
-</section>
 <section id="acceptance-rate-over-time" class="level2">
-<h2 class="anchored" data-anchor-id="acceptance-rate-over-time">7.3 Acceptance Rate Over Time</h2>
+<h2 class="anchored" data-anchor-id="acceptance-rate-over-time">7.2 Acceptance Rate Over Time</h2>
 <p><img src="./images/acceptance_rate.png" class="img-fluid"></p>
 </section>
 <section id="unique-actions-learned" class="level2">
-<h2 class="anchored" data-anchor-id="unique-actions-learned">7.4 Unique Actions Learned</h2>
+<h2 class="anchored" data-anchor-id="unique-actions-learned">7.3 Unique Actions Learned</h2>
 <p><img src="./images/unique_actions.png" class="img-fluid"></p>
 </section>
 <section id="q-value-by-action" class="level2">
-<h2 class="anchored" data-anchor-id="q-value-by-action">7.5 Q-Value by Action</h2>
+<h2 class="anchored" data-anchor-id="q-value-by-action">7.4 Q-Value by Action</h2>
 <p><img src="./images/q_value_per_action.png" class="img-fluid"></p>
 </section>
 <section id="final-q-values" class="level2">
-<h2 class="anchored" data-anchor-id="final-q-values">7.6 Final Q-Values</h2>
+<h2 class="anchored" data-anchor-id="final-q-values">7.5 Final Q-Values</h2>
 <p><img src="./images/final_q_values.png" class="img-fluid"></p>
 </section>
 <section id="q-value-vs-baseline" class="level2">
-<h2 class="anchored" data-anchor-id="q-value-vs-baseline">7.7 Q-Value vs Baseline</h2>
+<h2 class="anchored" data-anchor-id="q-value-vs-baseline">7.6 Q-Value vs Baseline</h2>
 <p><img src="./images/q_value_vs_manual.png" class="img-fluid"></p>
 </section>
 <section id="summary-metrics" class="level2">
-<h2 class="anchored" data-anchor-id="summary-metrics">7.8 Summary Metrics</h2>
+<h2 class="anchored" data-anchor-id="summary-metrics">7.7 Summary Metrics</h2>
 <div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Metric              <span class="pp">|</span> Value <span class="pp">|</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------------------|-------|</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Total Seen          <span class="pp">|</span> 430   <span class="pp">|</span></span>
@@ -795,7 +792,7 @@ Note
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Unique Actions      <span class="pp">|</span> 22    <span class="pp">|</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="metrics-daily" class="level2">
-<h2 class="anchored" data-anchor-id="metrics-daily">7.9 Metrics (Daily)</h2>
+<h2 class="anchored" data-anchor-id="metrics-daily">7.8 Metrics (Daily)</h2>
 <div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Time              <span class="pp">|</span> Seen <span class="pp">|</span> Accepted <span class="pp">|</span> Acceptance Rate (%) <span class="pp">|</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------------------|------|----------|---------------------|</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-08-28 00:00  <span class="pp">|</span> 33   <span class="pp">|</span> 3  <span class="pp">|</span> 9.09                      <span class="pp">|</span></span>
@@ -809,7 +806,7 @@ Note
 <span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="metrics-hourly" class="level2">
-<h2 class="anchored" data-anchor-id="metrics-hourly">7.10 Metrics (Hourly)</h2>
+<h2 class="anchored" data-anchor-id="metrics-hourly">7.9 Metrics (Hourly)</h2>
 <div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Time              <span class="pp">|</span> Seen <span class="pp">|</span> Accepted <span class="pp">|</span> Acceptance Rate (%) <span class="pp">|</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------------------|------|----------|---------------------|</span></span>
@@ -828,7 +825,7 @@ Note
 <span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="klm-savings" class="level2">
-<h2 class="anchored" data-anchor-id="klm-savings">7.11 KLM Savings</h2>
+<h2 class="anchored" data-anchor-id="klm-savings">7.10 KLM Savings</h2>
 <div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>=<span class="al">== KLM Savings Summary ==</span>=</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>manual_total_time   : 155.76</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>bandit_total_time   : 52.8</span>
@@ -837,11 +834,11 @@ Note
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>num_suggestions     : 30</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="klm-hourly" class="level2">
-<h2 class="anchored" data-anchor-id="klm-hourly">7.12 KLM Hourly</h2>
+<h2 class="anchored" data-anchor-id="klm-hourly">7.11 KLM Hourly</h2>
 <p><img src="./images/klm_time_H.png" class="img-fluid"></p>
 </section>
 <section id="klm-daily" class="level2">
-<h2 class="anchored" data-anchor-id="klm-daily">7.13 KLM Daily</h2>
+<h2 class="anchored" data-anchor-id="klm-daily">7.12 KLM Daily</h2>
 <p><img src="./images/klm_time_D.png" class="img-fluid"></p>
 </section>
 </section>
@@ -876,6 +873,10 @@ Note
 <li><p>Productivity research in HCI and intelligent tutoring systems.</p></li>
 </ul>
 </section>
+<section id="related-work-1" class="level1">
+<h1>11. Related Work</h1>
+<p>The foundation of human-computer interaction modeling was established by <span class="citation" data-cites="hci">(<a href="#ref-hci" role="doc-biblioref">Hill 1984</a>)</span> with their Keystroke-Level Model, which quantifies user interaction costs. Building on this, multi-armed bandit algorithms have proven effective for optimization problems, with <span class="citation" data-cites="ucb">(<a href="#ref-ucb" role="doc-biblioref">Hu 2024</a>)</span> introducing UCB bandits and <span class="citation" data-cites="epoch">(<a href="#ref-epoch" role="doc-biblioref">Langford, Research, and Zhang 2007</a>)</span> extending this to contextual scenarios.</p>
+</section>
 <section id="conclusion" class="level1">
 <h1>12. Conclusion</h1>
 <p>This paper presents CIOP v1.0, a real-time RL system for cognitive optimization at the CLI. This manuscript demonstrates feasibility, presents early metrics, and lays out the vision for multi-domain expansion. With early testing using Multi-Arm Bandit, I could see reduction upto <span class="math inline">\(\approx 31\%\)</span>.</p>
@@ -883,8 +884,18 @@ Note
 </section>
 <section id="references" class="level1">
 <h1>13. References</h1>
-<div id="refs" role="list">
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<p><a href="https://en.wikipedia.org/wiki/Keystroke-level_model">Keystroke Level Model</a></p>
+<p><a href="https://arxiv.org/pdf/1904.07272">MultiArm Bandit</a></p>
+<div id="ref-hci" class="csl-entry" role="listitem">
+Hill, David. 1984. <span>“A Bibliography to Human-Computer Interaction: Concepts, Methods and Problems.”</span> October 1984.
+</div>
+<div id="ref-ucb" class="csl-entry" role="listitem">
+Hu, Kaizhuo. 2024. <span>“Comprehensive Introduction and Analysis of the UCB Algorithm in Multi-Armed Bandit Problems.”</span> <em>Highlights in Science, Engineering and Technology</em> 94 (April): 247–50. <a href="https://doi.org/10.54097/wm3zkc73">https://doi.org/10.54097/wm3zkc73</a>.
+</div>
+<div id="ref-epoch" class="csl-entry" role="listitem">
+Langford, John, Yahoo Research, and Tong Zhang. 2007. <span>“The Epoch-Greedy Algorithm for Contextual Multi-Armed Bandits.”</span> <em>Advances in Neural Information Processing Systems 20 - Proceedings of the 2007 Conference</em>, January.
+</div>
 </div>
 
 

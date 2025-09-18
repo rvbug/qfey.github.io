@@ -2,6 +2,7 @@
 title: "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning"
 author: "Rakesh Venkat"
 date: "2025-09-16"
+bibliography: references.bib
 format: html
 ---
 
@@ -474,34 +475,29 @@ $> ciop --metrics
 ```
 
 
-## 7.2 Offline Python analysis.
 
-![](./images/final_q_values.png)
-
-
-## 7.3 Acceptance Rate Over Time
+## 7.2 Acceptance Rate Over Time
 
 ![](./images/acceptance_rate.png)
 
-## 7.4 Unique Actions Learned
+## 7.3 Unique Actions Learned
 
 ![](./images/unique_actions.png)
 
-## 7.5 Q-Value by Action
+## 7.4 Q-Value by Action
 
 
 ![](./images/q_value_per_action.png)
 
-## 7.6 Final Q-Values
+## 7.5 Final Q-Values
 
 ![](./images/final_q_values.png)
 
-## 7.7 Q-Value vs Baseline
+## 7.6 Q-Value vs Baseline
 
 ![](./images/q_value_vs_manual.png)
 
-
-## 7.8 Summary Metrics
+## 7.7 Summary Metrics
 
 ```markdown
 | Metric              | Value |
@@ -512,7 +508,7 @@ $> ciop --metrics
 | Unique Actions      | 22    |
 ```
 
-## 7.9 Metrics (Daily)
+## 7.8 Metrics (Daily)
 
 ```markdown
 | Time              | Seen | Accepted | Acceptance Rate (%) |
@@ -528,7 +524,7 @@ $> ciop --metrics
 ...
 ```
 
-## 7.10 Metrics (Hourly)
+## 7.9 Metrics (Hourly)
 
 ```markdown
 
@@ -549,7 +545,7 @@ $> ciop --metrics
 ...
 ```
 
-## 7.11 KLM Savings
+## 7.10 KLM Savings
 
 ```markdown
 === KLM Savings Summary ===
@@ -560,11 +556,11 @@ num_manual          : 29
 num_suggestions     : 30
 ```
 
-## 7.12 KLM Hourly
+## 7.11 KLM Hourly
 
 ![](./images/klm_time_H.png)
 
-## 7.13 KLM Daily
+## 7.12 KLM Daily
 ![](./images/klm_time_D.png)
 
 # 8. Discussion
@@ -602,6 +598,10 @@ The results show CIOP v1.0 learns to prioritize high-value commands (ls, pwd) wh
 
 -   Productivity research in HCI and intelligent tutoring systems.
 
+# 11. Related Work
+
+The foundation of human-computer interaction modeling was established by [@hci] with their Keystroke-Level Model, which quantifies user interaction costs. Building on this, multi-armed bandit algorithms have proven effective for optimization problems, with [@ucb] introducing UCB bandits and [@epoch] extending this to contextual scenarios.
+
 # 12. Conclusion
 
 This paper presents CIOP v1.0, a real-time RL system for cognitive optimization at the CLI. This manuscript demonstrates feasibility, presents early metrics, and lays out the vision for multi-domain expansion. With early testing using Multi-Arm Bandit, I could see reduction upto $\approx 31\%$.
@@ -612,5 +612,11 @@ For the example sequence, the KLM predicts <b>$\approx 11.4s$</b> when typed man
 
 # 13. References
 
+
+
 ::: {#refs}
+
+[Keystroke Level Model](https://en.wikipedia.org/wiki/Keystroke-level_model)
+
+[MultiArm Bandit](https://arxiv.org/pdf/1904.07272)
 :::
