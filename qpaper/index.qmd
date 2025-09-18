@@ -12,7 +12,7 @@ CIOP consists of two sub projects
 
 ## > **Autonomous Command Optimization Network (ACON)**
 
--   [v1.0 via Multi-Arm Bandit](./ResearchPaper.qmd) - <b><span style="color:green;"> **Completed**</span>
+-   [v1.0 via Multi-Arm Bandit](./acon.qmd) - <b><span style="color:green;"> **Completed**</span>
 
 -   *v2.0: Advanced Reinforcement Learning* - <b><span style="color:maroon;">*In Progress*</span>
 

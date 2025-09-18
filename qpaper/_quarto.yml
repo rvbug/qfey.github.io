@@ -17,7 +17,7 @@ website:
       - text: "CIOP"
         menu:
           - text: "ACON v1.0"
-            href: ResearchPaper.qmd
+            href: acon.qmd
        
 format:
   html:
