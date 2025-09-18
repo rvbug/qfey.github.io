@@ -590,16 +590,6 @@ The results show CIOP v1.0 learns to prioritize high-value commands (ls, pwd) wh
 
 # 11. Related Work
 
--   Card, Moran, Newell. The Psychology of Human-Computer Interaction (1983) — Keystroke-Level Model.
-
--   Auer et al. (2002) — UCB bandits.
-
--   Langford & Zhang (2008) — Contextual bandits.
-
--   Productivity research in HCI and intelligent tutoring systems.
-
-# 11. Related Work
-
 The foundation of human-computer interaction modeling was established by [@hci] with their Keystroke-Level Model, which quantifies user interaction costs. Building on this, multi-armed bandit algorithms have proven effective for optimization problems, with [@ucb] introducing UCB bandits and [@epoch] extending this to contextual scenarios.
 
 # 12. Conclusion
@@ -612,11 +602,8 @@ For the example sequence, the KLM predicts <b>$\approx 11.4s$</b> when typed man
 
 # 13. References
 
-
+- [Keystroke Level Model](https://en.wikipedia.org/wiki/Keystroke-level_model)
+- [MultiArm Bandit](https://arxiv.org/pdf/1904.07272)
 
 ::: {#refs}
-
-[Keystroke Level Model](https://en.wikipedia.org/wiki/Keystroke-level_model)
-
-[MultiArm Bandit](https://arxiv.org/pdf/1904.07272)
 :::

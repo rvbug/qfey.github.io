@@ -203,13 +203,6 @@
     "text": "7.12 KLM Daily"
   },
   {
-    "objectID": "ResearchPaper.html#related-work-2",
-    "href": "ResearchPaper.html#related-work-2",
-    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "13.1 Related work",
-    "text": "13.1 Related work\nPrevious research on cognitive optimization (Paul Holleis 2025) has shown\n\nKeystroke Level Model MultiArm Bandit\n\nHill, David. 1984. “A Bibliography to Human-Computer Interaction: Concepts, Methods and Problems.” October 1984.\n\n\nPaul Holleis, Heinrich Hussmann, Friederike Otto. 2025. “CIOP ACON.” September 16, 2025. https://dl.acm.org/doi/10.1145/1240624.1240851."
-  },
-  {
     "objectID": "ciop-v1/Overview.html",
     "href": "ciop-v1/Overview.html",
     "title": "qpaper",
