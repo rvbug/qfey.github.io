@@ -1,0 +1,16 @@
+---
+title: "index"
+format: html
+---
+
+# Research Papers
+
+## Multi-Armed Bandit Series
+
+-   [v1.0: Practical Implementation](manuscript.qmd) - Basic CIOP with MAB using Rust & Python
+-   **v2.0: Advanced Reinforcement Learning** - Coming Soon
+
+## Publication Status
+
+-   **Published**: MAB v1.0 (ArXiv:2024.xxxxx)
+-   **In Progress**: RL v2.0, Quantum ML

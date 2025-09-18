@@ -1,0 +1,13 @@
+---
+title: qpaper
+authors:
+  - name: Rakesh Venkat
+    affiliation: QubitAI.in
+    roles: writing
+    corresponding: true
+bibliography: ../references.bib
+---
+
+```{python}
+1 + 1
+```

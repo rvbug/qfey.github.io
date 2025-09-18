@@ -1,9 +1,56 @@
 [
   {
+    "objectID": "RL/Introduction.html",
+    "href": "RL/Introduction.html",
+    "title": "Introduction Section",
+    "section": "",
+    "text": "Introduction section\nComing Soon..",
+    "crumbs": [
+      "Home",
+      "Reinforcement Learning",
+      "Introduction Section"
+    ]
+  },
+  {
+    "objectID": "RL/MAB.html",
+    "href": "RL/MAB.html",
+    "title": "MAB",
+    "section": "",
+    "text": "What is MAB\nComing Soon..",
+    "crumbs": [
+      "Home",
+      "Reinforcement Learning",
+      "MAB"
+    ]
+  },
+  {
+    "objectID": "QML/Introduction.html",
+    "href": "QML/Introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Welcome to the world of Quantum Computing",
+    "crumbs": [
+      "Home",
+      "Quantum ML",
+      "Introduction"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "qbits",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://qfey.in/qbits-notes/."
+  },
+  {
+    "objectID": "RL/index.html",
+    "href": "RL/index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Welcome\nWelcome to Reinforcement Learning .. Coming Soon",
+    "crumbs": [
+      "Home",
+      "Reinforcement Learning"
+    ]
   }
 ]

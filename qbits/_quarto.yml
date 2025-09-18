@@ -23,10 +23,20 @@ website:
       - text: QFey
         href: https://qfey.in/
         target: _blank
+  sidebar: 
+    contents:
+      - section: "Reinforcement Learning"
+        contents: "RL/*.qmd"
+      - section: "Quantum ML"
+        contents: "QML/*.qmd"
 
 format:
   html:
-    css: 
-      - https://qfey.in/css/style.css
-      - "css/blog-override.css"
-
+    theme: darkly
+    toc: true
+    toc-location: right
+    toc-depth: 3
+    anchor-sections: true
+    smooth-scroll: true
+    code-copy: true
+    code-fold: false

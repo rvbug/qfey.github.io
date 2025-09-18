@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rakesh Venkat">
+<meta name="dcterms.date" content="2025-09-16">
+
+<title>Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning – Research Home</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/favicon-32x32.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8610558a007458a9b978551a034f4d85.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Research Home</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://qubitai.in" target="_blank"> 
+<span class="menu-text">QbitAI.in</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://qfey.in/ciop.html" target="_blank"> 
+<span class="menu-text">Qfey.in</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ciop" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">CIOP</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ciop">    
+        <li>
+    <a class="dropdown-item" href="./ResearchPaper.html">
+ <span class="dropdown-text">ACON v1.0</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#keystroke-level-model" id="toc-keystroke-level-model" class="nav-link" data-scroll-target="#keystroke-level-model">2. Keystroke-Level Model</a>
+  <ul class="collapse">
+  <li><a href="#klm-basics" id="toc-klm-basics" class="nav-link" data-scroll-target="#klm-basics">2.1 KLM Basics</a></li>
+  </ul></li>
+  <li><a href="#example-keystroke-level-optimization" id="toc-example-keystroke-level-optimization" class="nav-link" data-scroll-target="#example-keystroke-level-optimization">3. Example: Keystroke-Level Optimization</a>
+  <ul class="collapse">
+  <li><a href="#baseline-workflow-calculations" id="toc-baseline-workflow-calculations" class="nav-link" data-scroll-target="#baseline-workflow-calculations">3.1 <strong>Baseline workflow &amp; Calculations</strong>:</a></li>
+  <li><a href="#ciop-suggestions-savings" id="toc-ciop-suggestions-savings" class="nav-link" data-scroll-target="#ciop-suggestions-savings">3.2 <strong>CIOP suggestions &amp; Savings</strong>:</a></li>
+  <li><a href="#final-evaluation" id="toc-final-evaluation" class="nav-link" data-scroll-target="#final-evaluation">3.3 Final Evaluation</a></li>
+  </ul></li>
+  <li><a href="#system-overview" id="toc-system-overview" class="nav-link" data-scroll-target="#system-overview">4. System Overview</a>
+  <ul class="collapse">
+  <li><a href="#ciop-architecture" id="toc-ciop-architecture" class="nav-link" data-scroll-target="#ciop-architecture">4.1 CIOP Architecture</a></li>
+  <li><a href="#ciop-flow-chart" id="toc-ciop-flow-chart" class="nav-link" data-scroll-target="#ciop-flow-chart">4.2 CIOP Flow chart</a></li>
+  <li><a href="#ciop-sequence-diagram" id="toc-ciop-sequence-diagram" class="nav-link" data-scroll-target="#ciop-sequence-diagram">4.3 CIOP Sequence Diagram</a></li>
+  </ul></li>
+  <li><a href="#future-direction" id="toc-future-direction" class="nav-link" data-scroll-target="#future-direction">5.Future direction:</a></li>
+  <li><a href="#implementation-setup" id="toc-implementation-setup" class="nav-link" data-scroll-target="#implementation-setup">6. Implementation &amp; Setup</a>
+  <ul class="collapse">
+  <li><a href="#folder-structure" id="toc-folder-structure" class="nav-link" data-scroll-target="#folder-structure">6.1 Folder structure</a></li>
+  <li><a href="#cli-and-arguments" id="toc-cli-and-arguments" class="nav-link" data-scroll-target="#cli-and-arguments">6.2 CLI and Arguments</a></li>
+  <li><a href="#toml-extensible-configuration" id="toc-toml-extensible-configuration" class="nav-link" data-scroll-target="#toml-extensible-configuration">6.3 TOML Extensible configuration</a></li>
+  <li><a href="#zsh-command-logging" id="toc-zsh-command-logging" class="nav-link" data-scroll-target="#zsh-command-logging">6.4 zsh command logging</a></li>
+  <li><a href="#events-rl_event_pipe." id="toc-events-rl_event_pipe." class="nav-link" data-scroll-target="#events-rl_event_pipe.">6.5 Events <code>rl_event_pipe</code>.</a></li>
+  <li><a href="#python-bandit-agent" id="toc-python-bandit-agent" class="nav-link" data-scroll-target="#python-bandit-agent">6.6 <strong>Python</strong> bandit agent:</a>
+  <ul class="collapse">
+  <li><a href="#consume-events." id="toc-consume-events." class="nav-link" data-scroll-target="#consume-events.">6.6.1 Consume events.</a></li>
+  <li><a href="#loading-model" id="toc-loading-model" class="nav-link" data-scroll-target="#loading-model">6.6.2 Loading Model</a></li>
+  <li><a href="#epsilon-greedy" id="toc-epsilon-greedy" class="nav-link" data-scroll-target="#epsilon-greedy">6.6.3 Epsilon Greedy</a></li>
+  <li><a href="#fzf-python" id="toc-fzf-python" class="nav-link" data-scroll-target="#fzf-python">6.6.4 <code>fzf</code> (Python)</a></li>
+  <li><a href="#fzf-rust" id="toc-fzf-rust" class="nav-link" data-scroll-target="#fzf-rust">6.6.5 <code>fzf</code> (Rust)</a></li>
+  <li><a href="#fzf-zsh---ctrl-b-shortcut" id="toc-fzf-zsh---ctrl-b-shortcut" class="nav-link" data-scroll-target="#fzf-zsh---ctrl-b-shortcut">6.6.6. <code>fzf</code> (zsh - Ctrl-b shortcut)</a></li>
+  <li><a href="#bandit-suggestions" id="toc-bandit-suggestions" class="nav-link" data-scroll-target="#bandit-suggestions">6.6.7 Bandit Suggestions</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#metrics-analysis" id="toc-metrics-analysis" class="nav-link" data-scroll-target="#metrics-analysis">7. Metrics &amp; Analysis</a>
+  <ul class="collapse">
+  <li><a href="#real-time-rust-tui" id="toc-real-time-rust-tui" class="nav-link" data-scroll-target="#real-time-rust-tui">7.1 Real-time Rust TUI</a></li>
+  <li><a href="#offline-python-analysis." id="toc-offline-python-analysis." class="nav-link" data-scroll-target="#offline-python-analysis.">7.2 Offline Python analysis.</a></li>
+  <li><a href="#acceptance-rate-over-time" id="toc-acceptance-rate-over-time" class="nav-link" data-scroll-target="#acceptance-rate-over-time">7.3 Acceptance Rate Over Time</a></li>
+  <li><a href="#unique-actions-learned" id="toc-unique-actions-learned" class="nav-link" data-scroll-target="#unique-actions-learned">7.4 Unique Actions Learned</a></li>
+  <li><a href="#q-value-by-action" id="toc-q-value-by-action" class="nav-link" data-scroll-target="#q-value-by-action">7.5 Q-Value by Action</a></li>
+  <li><a href="#final-q-values" id="toc-final-q-values" class="nav-link" data-scroll-target="#final-q-values">7.6 Final Q-Values</a></li>
+  <li><a href="#q-value-vs-baseline" id="toc-q-value-vs-baseline" class="nav-link" data-scroll-target="#q-value-vs-baseline">7.7 Q-Value vs Baseline</a></li>
+  <li><a href="#summary-metrics" id="toc-summary-metrics" class="nav-link" data-scroll-target="#summary-metrics">7.8 Summary Metrics</a></li>
+  <li><a href="#metrics-daily" id="toc-metrics-daily" class="nav-link" data-scroll-target="#metrics-daily">7.9 Metrics (Daily)</a></li>
+  <li><a href="#metrics-hourly" id="toc-metrics-hourly" class="nav-link" data-scroll-target="#metrics-hourly">7.10 Metrics (Hourly)</a></li>
+  <li><a href="#klm-savings" id="toc-klm-savings" class="nav-link" data-scroll-target="#klm-savings">7.11 KLM Savings</a></li>
+  <li><a href="#klm-hourly" id="toc-klm-hourly" class="nav-link" data-scroll-target="#klm-hourly">7.12 KLM Hourly</a></li>
+  <li><a href="#klm-daily" id="toc-klm-daily" class="nav-link" data-scroll-target="#klm-daily">7.13 KLM Daily</a></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">8. Discussion</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">9. Limitations:</a></li>
+  <li><a href="#roadmap" id="toc-roadmap" class="nav-link" data-scroll-target="#roadmap">10. Roadmap:</a></li>
+  <li><a href="#related-work" id="toc-related-work" class="nav-link" data-scroll-target="#related-work">11. Related Work</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">12. Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">13. References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rakesh Venkat </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 16, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="abstract" class="level1">
+<h1>Abstract</h1>
+<p>Large Language Models and automation frameworks have enabled new forms of productivity, but they rarely optimize the <em>cognitive effort</em> of individual users in real time. I introduce <strong>Cognitive Interaction Optimization Platform (CIOP)</strong>, a multi-domain <strong>Reinforcement Learning (RL)</strong> framework designed to optimize human-computer interaction in real time. This is composed of domain-specific RL agents each focusing on a unique aspect of efficency like like <strong>Cognitive Intelligence</strong> and <strong>Real-time Adaptation</strong>.</p>
+<p>This framework had two sub components:</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Autonmous Command Optimization Network (ACON)</strong></label></li>
+<li><label><input type="checkbox"><strong>Cognitive Optimization Workflow Intelligence (COWI)</strong></label></li>
+</ul>
+<p>This manuscript focuses on version 1.0 of <strong>Autonmous Command Optimization Network (ACON)</strong> which captures real-time user behavior, suggests optimized actions, and adapts continuously. Initial results show that ACON reduces keystrokes and mental operations, aligning with the <em>Keystroke-Level Model (KLM)</em>. I presents an early version of the platform, with code snippets, metrics, and a roadmap towards multi-domain cognitive optimization. The version (1.0) focuses on <strong>Multi-Armed Bandit Reinforcement Learning</strong></p>
+</section>
+<section id="introduction" class="level1">
+<h1>1. Introduction</h1>
+<p>Modern AI tools prioritize automation but they overlook micro-level user interactions. In practice, productivity is often bottlenecked by repetitive keystrokes, redundant commands, or inefficient workflows. In the age of Agentic AI, there remains a need for systems that <strong>directly optimize user cognition and interaction flows</strong>.</p>
+<p>I propose <strong>Autonmous Command Optimization Network (ACON)</strong> — a <em><strong>Reinforcement Learning (RL)</strong></em> driven platform to optimize productivity through <strong>real-time adaptation</strong>. This version targets the CLI which is chosen for its structured yet open-ended action space. While LLMs focus on semantic reasoning, ACON specifically addresses <em>interaction efficiency</em>.</p>
+</section>
+<section id="keystroke-level-model" class="level1">
+<h1>2. Keystroke-Level Model</h1>
+<p>KLM is a classic model from <strong>Human-Computer Interaction (HCL)</strong> research that estimates tasks’ time based on the keystrokes, mental operations and system responses. CIOP v1.0 adopts KLM as baseline to quantify reductions in command line cognitive load.</p>
+<p>KLM predicts how long a user will take to complete a routine task without errors and is based on the family of <strong>Goals, Operators Methods Selection (GOMS)</strong> model</p>
+<section id="klm-basics" class="level2">
+<h2 class="anchored" data-anchor-id="klm-basics">2.1 KLM Basics</h2>
+<p>KLM proposes following six operations. For this version of ACON, we will be disregarding the <em>pointing devices</em> and consider that only keyboard is the input device.</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><em>K</em> - Keystroke</label></li>
+<li><label><input type="checkbox"><em>H</em> - Homing hands on keyboard</label></li>
+<li><label><input type="checkbox"><em>M</em> - Mental preparation for action and decision making</label></li>
+<li><label><input type="checkbox"><em>R</em> - System response time. This is unique to the system</label></li>
+</ul>
+<p>Each of the elements has a time associated with it. This paper considers</p>
+<ul>
+<li><strong>K</strong> - Keystroke by an average typist is <span class="math inline">\(\approx 40 wpm\)</span> is 0.28s<br>
+</li>
+<li><strong>M</strong> - Mental preparation would be <span class="math inline">\(\approx 1.35s\)</span></li>
+</ul>
+<p><strong>Keystroke-Level Model (KLM)</strong> estimates task time as:</p>
+<p><span class="math display">\[Total ​= \sum(nk​⋅tk​)+∑(nm​⋅tm​)+∑(nr​⋅tr​)\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p><span class="math inline">\(n_k\)</span> : number of keystrokes, <span class="math inline">\(t_k\)</span> <span class="math inline">\(\approx\)</span> 0.28</p></li>
+<li><p><span class="math inline">\(n_m\)</span>​: number of mental operations, <span class="math inline">\(t_m\)</span> <span class="math inline">\(\approx\)</span> 1.2s</p></li>
+<li><p><span class="math inline">\(n_r\)</span> : number of system responses <span class="math inline">\(t_r\)</span> = <span class="math inline">\(\approx\)</span> 0.3s</p></li>
+</ul>
+</section>
+</section>
+<section id="example-keystroke-level-optimization" class="level1">
+<h1>3. Example: Keystroke-Level Optimization</h1>
+<p>To illustrate ACON v1.0 in action, consider a developer navigating into a project and opening a file.</p>
+<section id="baseline-workflow-calculations" class="level2">
+<h2 class="anchored" data-anchor-id="baseline-workflow-calculations">3.1 <strong>Baseline workflow &amp; Calculations</strong>:</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> logger</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> src</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">nvim</span> main.rs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This requires:</p>
+<ul>
+<li>keystrokes: <span class="math inline">\(\approx 30\)</span> [typing all commands including spaces]</li>
+<li>Mental Ops: <span class="math inline">\(\approx 2\)</span> [recall dir names, deciding sequence cd -&gt; mkdir -&gt; cd -&gt; nvim ]</li>
+<li>System Response: <span class="math inline">\(\approx 3\)</span> [return key after each command and wait time to finish]</li>
+</ul>
+<p><span class="math inline">\(T_{manual} = (29 \times 0.28) + (2 \times 1.2) + (3 \times 0.3) \approx 8.4 + 2.4 + 0.9 \approx 11.4s\)</span></p>
+</section>
+<section id="ciop-suggestions-savings" class="level2">
+<h2 class="anchored" data-anchor-id="ciop-suggestions-savings">3.2 <strong>CIOP suggestions &amp; Savings</strong>:</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># suggested early by bandit as it learns this folder is used frequently.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">nvim</span> logger/src/main.rs</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\(T_{bandit} = (23 \times 0.28) + (1 \times 1.2) + (1 \times 0.3) \approx 8.4 + 2.4 + 0.9 \approx 7.9s\)</span></p>
+</section>
+<section id="final-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="final-evaluation">3.3 Final Evaluation</h2>
+<ul>
+<li><p><strong>Baseline Value:</strong> <span class="math inline">\(\approx 11.4s\)</span></p></li>
+<li><p><strong>With CIOP:</strong> <span class="math inline">\(\approx 7.9s\)</span></p></li>
+</ul>
+<p><strong>Roughly <b><span style="color:red;"> 31% Reduction </span></b></strong></p>
+</section>
+</section>
+<section id="system-overview" class="level1">
+<h1>4. System Overview</h1>
+<p>CIOP v1.0 integrates:</p>
+<ul>
+<li><strong>Rust logger</strong>: captures CLI events in real-time.</li>
+<li><strong>Unified Event Pipe</strong>: streams data across CLI and other domains.</li>
+<li><strong>Bandit Agent</strong> (Python): learns user-specific action preferences.</li>
+<li><strong>Metrics layer</strong>: Rust TUI for real-time summaries, offline Python analysis for research plots.</li>
+</ul>
+<section id="ciop-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="ciop-architecture">4.1 CIOP Architecture</h2>
+<p>Here is the system architecture of the CIOP with CLI agent. Future roadmap will use other domains and Meta-Agents.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    subgraph CLI
+        A[User CLI Commands]
+    end
+
+    subgraph Logger
+        B[Rust Logger] --&gt; C[(rl_event_pipe)]
+        B --&gt; H[logger_cli.log]
+    end
+
+    subgraph Agent
+        D[Contextual Bandit Agent Python]
+        E[Meta-Agent future]
+    end
+
+    subgraph Metrics
+        F[Rust TUI real-time]
+        G[Python Analysis offline]
+    end
+
+    subgraph Orchestration
+        X[script.sh]
+    end
+
+    A --&gt; B
+    C --&gt; D
+    H --&gt; D
+    D --&gt; F
+    D --&gt; G
+    D -.-&gt; E
+    E --&gt; F
+    E --&gt; G
+    X --&gt; A
+    X --&gt; B
+    X --&gt; D
+    X --&gt; F
+    X --&gt; G
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="ciop-flow-chart" class="level2">
+<h2 class="anchored" data-anchor-id="ciop-flow-chart">4.2 CIOP Flow chart</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    subgraph User
+        A1[Manual Typing] --&gt;|logs| L[logger_cli.log]
+        A2[Bandit Suggest] --&gt;|accept/cancel| M[.cli_bandit_accepts]
+    end
+
+    subgraph Logger
+        L --&gt;|command_seen| J[.cli_bandit_metrics.jsonl]
+        A2 --&gt;|suggestion_shown| J
+        A2 --&gt;|suggestion_accepted| J
+    end
+
+    subgraph PythonAgent["Python Agent"]
+        J --&gt;|command_seen discovery| B[cli_bandit_agent.py]
+        M --&gt;|reward updates| B
+        B --&gt;|save model| N[.cli_bandit_model.json]
+        B --&gt;|log q_updates| J
+    end
+
+    subgraph RustTUI["Rust TUI"]
+        J --&gt; R[metrics.rs viewer]
+    end
+
+    subgraph PythonAnalysis["Python Analysis"]
+        J --&gt; P1[metrics_analysis.py]
+        P1 --&gt;|KLM savings &amp; plots| IMG[image/*.png]
+    end
+
+    subgraph MetaAgent["Meta Agent"]
+        J --&gt; P2[meta_agent.py]
+    end
+
+    User --&gt;|test script| S[script.sh]
+    S --&gt; Logger
+    S --&gt; PythonAgent
+    S --&gt; RustTUI
+    S --&gt; PythonAnalysis
+    S --&gt; MetaAgent
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><b><span style="color:green;">User commands are categorized as <em>Manual Typing</em> </span></b></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ciop-sequence-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="ciop-sequence-diagram">4.3 CIOP Sequence Diagram</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+  participant User as User (CLI)
+  participant Logger as Rust Logger
+  participant Pipe as rl_event_pipe
+  participant Agent as Bandit Agent (Python)
+  participant Metrics as Rust TUI
+  participant Analysis as Python Metrics
+
+  User-&gt;&gt;Logger: Type command
+  Logger-&gt;&gt;Pipe: Write event (command_seen)
+  Logger-&gt;&gt;Metrics: Update real-time display
+  Logger-&gt;&gt;Analysis: Log command to metrics.jsonl
+
+  User-&gt;&gt;Agent: Invoke suggestion (Ctrl-B)
+  Agent-&gt;&gt;Pipe: Reads context (cwd, history)
+  Agent-&gt;&gt;User: Suggest top-k commands
+  User-&gt;&gt;Agent: Accept suggestion
+  Agent-&gt;&gt;Metrics: Log suggestion_accepted
+  Agent-&gt;&gt;Analysis: Log q_update &amp; KLM savings
+
+    Note over Metrics,Analysis: Metrics shown real-time in Rust TUI&lt;br&gt;Offline analysis &amp; plots with Python
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="future-direction" class="level1">
+<h1>5.Future direction:</h1>
+<p>While v1.0 focuses on single-command preference learning, later versions of CIOP will extend to composite actions or macros. For example, instead of issuing cd, ls, and vim separately, CIOP could propose a macro such as:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ciop-open</span> main.rs   <span class="co"># hypothetical composite command</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This requires:</p>
+<ul>
+<li>keystrokes: <span class="math inline">\(\approx 17\)</span></li>
+<li>Mental Ops: <span class="math inline">\(\approx 1\)</span><br>
+</li>
+<li>System Response: <span class="math inline">\(\approx 1\)</span></li>
+</ul>
+<p><span class="math inline">\(T_{manual} = (17 \times 0.28) + (1 \times 1.2) + (1 \times 0.3) \approx 4.76 + 1.2 + 0.3 \approx 6.26s\)</span></p>
+<p><strong>With macros, it will be roughly a <b><span style="color:red;"> 58% Reduction </span></b></strong></p>
+</section>
+<section id="implementation-setup" class="level1">
+<h1>6. Implementation &amp; Setup</h1>
+<p>CIOP is implemented in a hybrid architecture:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><b><span style="color:orange;">Metrics is based on my current limited usage.</span></b></li>
+<li><b><span style="color:green;">The full source code will open sourced shortly.</span></b></li>
+</ul>
+</div>
+</div>
+<section id="folder-structure" class="level2">
+<h2 class="anchored" data-anchor-id="folder-structure">6.1 Folder structure</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>acon</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>├── agent</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>│&nbsp;&nbsp; ├── cli_agent/</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>│&nbsp;&nbsp; ├── meta_agent/</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>├── Cargo.toml</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>├── logger</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>│&nbsp;&nbsp; └── src/</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>│&nbsp;&nbsp; ├── data/</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>│&nbsp;&nbsp; ├── logger.toml</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>│&nbsp;&nbsp; ├── Cargo.toml</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>├── script.sh</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>├── README.md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="cli-and-arguments" class="level2">
+<h2 class="anchored" data-anchor-id="cli-and-arguments">6.2 CLI and Arguments</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Usage<span class="op">:</span> logger <span class="op">&lt;</span>COMMAND<span class="op">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Commands<span class="op">:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  start    Start unified logger</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  tail     Tail live events from the pipe</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  search   Search module logs with ripgrep</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  fzf      Browse module logs with fzf</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  metrics  Real time Metrics</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  help     Print this message</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>Options<span class="op">:</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>h<span class="op">,</span> <span class="op">--</span>help     Print help</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span>V<span class="op">,</span> <span class="op">--</span>version  Print version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./images/ciop-start-log.png" height="220"></p>
+</section>
+<section id="toml-extensible-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="toml-extensible-configuration">6.3 TOML Extensible configuration</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[sources]</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">cli</span><span class="op">=</span><span class="cn">true</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">[output]</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="dt">pipe_path</span> <span class="op">=</span> <span class="st">"data/rl_event_pipe"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dt">backup_file</span> <span class="op">=</span> <span class="st">"data/rl_logs.jsonl"</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="kw">[cli]</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="dt">buffer_path</span> <span class="op">=</span> <span class="st">".cli_command_buffer"</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="dt">capture_fields</span> <span class="op">=</span> <span class="op">[</span> <span class="st">"time"</span><span class="op">,</span> <span class="st">"session_id"</span><span class="op">,</span> <span class="st">"cwd"</span><span class="op">,</span> <span class="st">"command"</span><span class="op">,</span> <span class="st">"keystroke_count"</span><span class="op">,</span> <span class="st">"exit_code"</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="zsh-command-logging" class="level2">
+<h2 class="anchored" data-anchor-id="zsh-command-logging">6.4 zsh command logging</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">precmd()</span> <span class="kw">{</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">local</span> <span class="va">RET</span><span class="op">=</span><span class="va">$?</span> <span class="co"># check for status 0 = successful</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">local</span> <span class="va">TS</span><span class="op">=</span><span class="va">$(</span><span class="fu">date</span> <span class="at">-Iseconds</span><span class="va">)</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># last command from history</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">local</span> <span class="va">CMD</span><span class="op">=</span><span class="va">$(</span><span class="bu">fc</span> <span class="at">-ln</span> <span class="at">-1</span><span class="va">)</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># encode to base64</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">local</span> <span class="va">CMD_B64</span><span class="op">=</span><span class="va">$(</span><span class="bu">printf</span> <span class="st">"%s"</span> <span class="st">"</span><span class="va">$CMD</span><span class="st">"</span> <span class="kw">|</span> <span class="fu">base64</span> <span class="kw">|</span> <span class="fu">tr</span> <span class="at">-d</span> <span class="st">'\n'</span><span class="va">)</span> </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># enable this code for recording the commands</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">"%s\t%s\t%s\t%s\n"</span> <span class="st">"</span><span class="va">$TS</span><span class="st">"</span> <span class="st">"</span><span class="va">$PWD</span><span class="st">"</span> <span class="st">"</span><span class="va">$RET</span><span class="st">"</span> <span class="st">"</span><span class="va">$CMD_B64</span><span class="st">"</span> <span class="op">&gt;&gt;</span> ~/.cli_command_buffer</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="events-rl_event_pipe." class="level2">
+<h2 class="anchored" data-anchor-id="events-rl_event_pipe.">6.5 Events <code>rl_event_pipe</code>.</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="dt">Path</span><span class="pp">::</span>new(pipe_path)<span class="op">.</span>exists() <span class="op">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">match</span> <span class="pp">OpenOptions::</span>new()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span>write(<span class="cn">true</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span>custom_flags(<span class="pp">libc::</span>O_NONBLOCK) <span class="co">// don’t block if no reader</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span>open(pipe_path)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>            <span class="cn">Ok</span>(<span class="kw">mut</span> pipe) <span class="op">=&gt;</span> <span class="op">{</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="kw">let</span> <span class="cn">Err</span>(e) <span class="op">=</span> <span class="pp">writeln!</span>(pipe<span class="op">,</span> <span class="st">"{}"</span><span class="op">,</span> json_str) <span class="op">{</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> e<span class="op">.</span>kind() <span class="op">!=</span> <span class="pp">std::io::ErrorKind::</span>BrokenPipe <span class="op">{</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>                <span class="pp">eprintln!</span>(<span class="st">"Failed to write to pipe: {}"</span><span class="op">,</span> e)<span class="op">;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">👀</span> Tailing cli events from data/rl_event_pipe</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">{</span><span class="st">"data"</span><span class="ex">:{</span><span class="st">"command"</span><span class="ex">:</span><span class="st">"ll"</span><span class="ex">,</span><span class="st">"cwd"</span><span class="ex">:</span><span class="st">"/projects/ciop/logger"</span><span class="ex">,</span><span class="st">"exit_code"</span><span class="ex">:0,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="st">"keystroke_count"</span><span class="ex">:2,</span><span class="st">"session_id"</span><span class="ex">:1,</span><span class="st">"time"</span><span class="ex">:</span><span class="st">"2022-09-17T10:22:48.159270Z"</span><span class="ex">},</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="st">"source"</span><span class="ex">:</span><span class="st">"cli"</span><span class="ex">}</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">{</span><span class="st">"event"</span><span class="ex">:</span> <span class="st">"suggestion_accepted"</span>, <span class="st">"suggestion_id"</span>: <span class="st">"ae2516bc"</span>, <span class="st">"source"</span>: <span class="st">"cli"</span>, <span class="st">"text"</span>: <span class="st">"pwd"</span>, <span class="st">"cwd"</span>: <span class="st">"ciop/logger"</span>, <span class="st">"seen"</span>: true, <span class="st">"accepted"</span>: true, <span class="st">"timestamp"</span>: <span class="st">"2025-09-17T03:42:22.603479Z"</span>, <span class="st">"keystrokes"</span>: 3, <span class="st">"mental_ops"</span>: 1, <span class="st">"predicted_time"</span>: 2.04}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ex">{</span><span class="st">"event"</span><span class="ex">:</span> <span class="st">"q_update"</span>, <span class="st">"source"</span>: <span class="st">"cli"</span>, <span class="st">"state"</span>: <span class="st">"/Users/rv/Documents/projects/ciop/logger"</span>, <span class="st">"action"</span>: <span class="st">"pwd"</span>, <span class="st">"reward"</span>: 1.0, <span class="st">"old_q"</span>: 1.0, <span class="st">"new_q"</span>: 1.0, <span class="st">"count"</span>: 6, <span class="st">"timestamp"</span>: <span class="st">"2025-09-17T03:42:22.604159Z"</span>, <span class="st">"keystrokes"</span>: 3, <span class="st">"mental_ops"</span>: 1, <span class="st">"predicted_time"</span>: 2.04}</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dt">{</span><span class="st">"cwd"</span><span class="dt">:</span><span class="st">"ciop/logger"</span><span class="op">,</span><span class="st">"event"</span><span class="dt">:</span><span class="st">"command_seen"</span><span class="op">,</span><span class="st">"exit_code"</span><span class="dt">:0</span><span class="op">,</span><span class="st">"keystrokes"</span><span class="dt">:14</span><span class="op">,</span><span class="st">"source"</span><span class="dt">:</span><span class="st">"cli"</span><span class="op">,</span><span class="st">"text"</span><span class="dt">:</span><span class="st">"bandit-suggest"</span><span class="op">,</span><span class="st">"timestamp"</span><span class="dt">:</span><span class="st">"2025-09-17T03:42:24.467725+00:00"</span><span class="dt">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="python-bandit-agent" class="level2">
+<h2 class="anchored" data-anchor-id="python-bandit-agent">6.6 <strong>Python</strong> bandit agent:</h2>
+<section id="consume-events." class="level3">
+<h3 class="anchored" data-anchor-id="consume-events.">6.6.1 Consume events.</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Listening for events..."</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> event <span class="kw">in</span> stream_events():</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Received:"</span>, event)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="loading-model" class="level3">
+<h3 class="anchored" data-anchor-id="loading-model">6.6.2 Loading Model</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a> agent <span class="op">=</span> load_agent_or_default(MODEL_PATH)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># generate suggestion id</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    suggestion_id <span class="op">=</span> <span class="bu">str</span>(uuid.uuid4())[:<span class="dv">8</span>]  <span class="co"># Short unique ID for this suggestion session</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1) Learn from previous accepts first</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    processed <span class="op">=</span> agent.update_from_accept_log(ACCEPT_LOG)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="epsilon-greedy" class="level3">
+<h3 class="anchored" data-anchor-id="epsilon-greedy">6.6.3 Epsilon Greedy</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> explore:</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> random.choice(<span class="va">self</span>.actions)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    strategy <span class="op">=</span> <span class="st">"explore"</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># choose best by Q</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="bu">max</span>(<span class="va">self</span>.q_values[state], key<span class="op">=</span><span class="va">self</span>.q_values[state].get)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    strategy <span class="op">=</span> <span class="st">"exploit"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="fzf-python" class="level3">
+<h3 class="anchored" data-anchor-id="fzf-python">6.6.4 <code>fzf</code> (Python)</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run_fzf(options):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> options:</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call fzf, return stdout (selected line) as str</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    proc <span class="op">=</span> subprocess.run([<span class="st">"fzf"</span>, <span class="st">"--height"</span>, <span class="st">"40%"</span>], <span class="bu">input</span><span class="op">=</span><span class="st">"</span><span class="ch">\n</span><span class="st">"</span>.join(options).encode(), capture_output<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> proc.stdout.decode().strip()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="fzf-rust" class="level3">
+<h3 class="anchored" data-anchor-id="fzf-rust">6.6.5 <code>fzf</code> (Rust)</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> status <span class="op">=</span> <span class="pp">Command::</span>new(<span class="st">"sh"</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span>arg(<span class="st">"-lc"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span>arg(<span class="pp">format!</span>(<span class="st">"cat {f} | fzf --no-sort --tac --preview 'echo {{}}'"</span><span class="op">,</span> f <span class="op">=</span> log_file))</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span>status()</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span>expect(<span class="st">"Failed to run fzf via shell"</span>)<span class="op">;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">!</span>status<span class="op">.</span>success() <span class="op">{</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>            <span class="pp">eprintln!</span>(<span class="st">"fzf exited with non-zero."</span>)<span class="op">;</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="fzf-zsh---ctrl-b-shortcut" class="level3">
+<h3 class="anchored" data-anchor-id="fzf-zsh---ctrl-b-shortcut">6.6.6. <code>fzf</code> (zsh - Ctrl-b shortcut)</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bandit-suggest()</span> <span class="kw">{</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">CMD</span><span class="op">=</span><span class="va">$(</span><span class="ex">python3</span> ciop/agent/cli_agent/bandit_suggest.py<span class="va">)</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">[</span> <span class="ot">-n</span> <span class="st">"</span><span class="va">$CMD</span><span class="st">"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># run command printed by the script</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"Bandit suggests: </span><span class="va">$CMD</span><span class="st">"</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">eval</span> <span class="st">"</span><span class="va">$CMD</span><span class="st">"</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">fi</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># bind Ctrl-b to the function (zsh)</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="ex">bindkey</span> <span class="at">-s</span> <span class="st">'^b'</span> <span class="st">'bandit-suggest\n'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="bandit-suggestions" class="level3">
+<h3 class="anchored" data-anchor-id="bandit-suggestions">6.6.7 Bandit Suggestions</h3>
+<p><img src="./images/fzf.png" height="300"></p>
+</section>
+</section>
+</section>
+<section id="metrics-analysis" class="level1">
+<h1>7. Metrics &amp; Analysis</h1>
+<p>I have evaluated CIOP using metrics logged during live CLI sessions.</p>
+<section id="real-time-rust-tui" class="level2">
+<h2 class="anchored" data-anchor-id="real-time-rust-tui">7.1 Real-time Rust TUI</h2>
+<p>This is a real time metrics run using</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span><span class="op">&gt;</span> ciop <span class="ex">--metrics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>┌ Info ───────────────────────────────────────────────────────────────────────┐</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>│Metrics viewer (press 'q' to quit, 'r' to reset)                             │</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>└─────────────────────────────────────────────────────────────────────────────┘</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>┌Bandit Metrics Summary───────────────────────────────────────────────────────┐</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>│Seen: 429   Accepted: 30   AcceptRate: 6.99%   UniqueActions: 20             │</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>└─────────────────────────────────────────────────────────────────────────────┘</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>┌Keystroke-Level Model (KLM)──────────────────────────────────────────────────┐</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>│Manual: 526 keystrokes, 54 mental, 54 sys → 228.28s                          │</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>└─────────────────────────────────────────────────────────────────────────────┘</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>┌Recent Metrics───────────────────────────────────────────────────────────────┐</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>│2025-09-17T15<span class="sc">:44:</span>57.586287Z | cli | q_update | -                             │</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>│   pwd                                                                       │</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>│2025-09-17T15<span class="sc">:44:</span>57.586542Z | cli | q_update | -                             │</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>│   clear                                                                     │                         </span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>│2025-09-17T15<span class="sc">:44:</span>57.588184Z | cli | command_seen | ciop/agent/cli_agent.     │</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>│   clear                                                                     │</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>│2025-09-17T15<span class="sc">:44:</span>57.588251Z | cli | command_seen | ciop/agent/cli_agent      │</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>│ ...                                                                         │</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>└─────────────────────────────────────────────────────────────────────────────┘</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>┌Raw Log (debug view)──────────────────────────────────────────────────────────┐</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>│{"event":"q_update","source": "cli","state": "ciop/agent/cli_agent","action"  │</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>│{"event":"q_update","source": "cli","state": "ciop/agent/cli_agent", "action":│</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>│{"event":"q_update","source": "cli","state": "ciop", "action": "pw", "reward" │</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="offline-python-analysis." class="level2">
+<h2 class="anchored" data-anchor-id="offline-python-analysis.">7.2 Offline Python analysis.</h2>
+<p><img src="./images/final_q_values.png" class="img-fluid"></p>
+</section>
+<section id="acceptance-rate-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="acceptance-rate-over-time">7.3 Acceptance Rate Over Time</h2>
+<p><img src="./images/acceptance_rate.png" class="img-fluid"></p>
+</section>
+<section id="unique-actions-learned" class="level2">
+<h2 class="anchored" data-anchor-id="unique-actions-learned">7.4 Unique Actions Learned</h2>
+<p><img src="./images/unique_actions.png" class="img-fluid"></p>
+</section>
+<section id="q-value-by-action" class="level2">
+<h2 class="anchored" data-anchor-id="q-value-by-action">7.5 Q-Value by Action</h2>
+<p><img src="./images/q_value_per_action.png" class="img-fluid"></p>
+</section>
+<section id="final-q-values" class="level2">
+<h2 class="anchored" data-anchor-id="final-q-values">7.6 Final Q-Values</h2>
+<p><img src="./images/final_q_values.png" class="img-fluid"></p>
+</section>
+<section id="q-value-vs-baseline" class="level2">
+<h2 class="anchored" data-anchor-id="q-value-vs-baseline">7.7 Q-Value vs Baseline</h2>
+<p><img src="./images/q_value_vs_manual.png" class="img-fluid"></p>
+</section>
+<section id="summary-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="summary-metrics">7.8 Summary Metrics</h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Metric              <span class="pp">|</span> Value <span class="pp">|</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------------------|-------|</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Total Seen          <span class="pp">|</span> 430   <span class="pp">|</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Total Accepted      <span class="pp">|</span> 30    <span class="pp">|</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Acceptance Rate (%) <span class="pp">|</span> 9.09  <span class="pp">|</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Unique Actions      <span class="pp">|</span> 22    <span class="pp">|</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="metrics-daily" class="level2">
+<h2 class="anchored" data-anchor-id="metrics-daily">7.9 Metrics (Daily)</h2>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Time              <span class="pp">|</span> Seen <span class="pp">|</span> Accepted <span class="pp">|</span> Acceptance Rate (%) <span class="pp">|</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------------------|------|----------|---------------------|</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-08-28 00:00  <span class="pp">|</span> 33   <span class="pp">|</span> 3  <span class="pp">|</span> 9.09                      <span class="pp">|</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-11 00:00  <span class="pp">|</span> 33   <span class="pp">|</span> 3  <span class="pp">|</span> 9.09                      <span class="pp">|</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-13 00:00  <span class="pp">|</span> 0    <span class="pp">|</span> 0  <span class="pp">|</span> 0.00                      <span class="pp">|</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-14 00:00  <span class="pp">|</span> 0    <span class="pp">|</span> 0  <span class="pp">|</span> 0.00                      <span class="pp">|</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-16 00:00  <span class="pp">|</span> 196  <span class="pp">|</span> 16 <span class="pp">|</span> 8.16                      <span class="pp">|</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-17 00:00  <span class="pp">|</span> 158  <span class="pp">|</span> 8  <span class="pp">|</span> 5.06                      <span class="pp">|</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="metrics-hourly" class="level2">
+<h2 class="anchored" data-anchor-id="metrics-hourly">7.10 Metrics (Hourly)</h2>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Time              <span class="pp">|</span> Seen <span class="pp">|</span> Accepted <span class="pp">|</span> Acceptance Rate (%) <span class="pp">|</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------------------|------|----------|---------------------|</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-08-28 07:00 <span class="pp">|</span> 33    <span class="pp">|</span> 3        <span class="pp">|</span> 9.09                <span class="pp">|</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-16 00:00 <span class="pp">|</span> 0     <span class="pp">|</span> 0        <span class="pp">|</span> 0.00                <span class="pp">|</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-16 04:00 <span class="pp">|</span> 44    <span class="pp">|</span> 4        <span class="pp">|</span> 9.09                <span class="pp">|</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-16 05:00 <span class="pp">|</span> 53    <span class="pp">|</span> 3        <span class="pp">|</span> 5.66                <span class="pp">|</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-16 06:00 <span class="pp">|</span> 22    <span class="pp">|</span> 2        <span class="pp">|</span> 9.09                <span class="pp">|</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-16 07:00 <span class="pp">|</span> 77    <span class="pp">|</span> 7        <span class="pp">|</span> 9.09                <span class="pp">|</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-16 23:00 <span class="pp">|</span> 0     <span class="pp">|</span> 0        <span class="pp">|</span> 0.00                <span class="pp">|</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-17 02:00 <span class="pp">|</span> 43    <span class="pp">|</span> 3        <span class="pp">|</span> 6.98                <span class="pp">|</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-17 03:00 <span class="pp">|</span> 95    <span class="pp">|</span> 5        <span class="pp">|</span> 5.26                <span class="pp">|</span></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2025-09-17 05:00 <span class="pp">|</span> 20    <span class="pp">|</span> 0        <span class="pp">|</span> 0.00                <span class="pp">|</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="klm-savings" class="level2">
+<h2 class="anchored" data-anchor-id="klm-savings">7.11 KLM Savings</h2>
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>=<span class="al">== KLM Savings Summary ==</span>=</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>manual_total_time   : 155.76</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>bandit_total_time   : 52.8</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>time_saved          : 102.96</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>num_manual          : 29</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>num_suggestions     : 30</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="klm-hourly" class="level2">
+<h2 class="anchored" data-anchor-id="klm-hourly">7.12 KLM Hourly</h2>
+<p><img src="./images/klm_time_H.png" class="img-fluid"></p>
+</section>
+<section id="klm-daily" class="level2">
+<h2 class="anchored" data-anchor-id="klm-daily">7.13 KLM Daily</h2>
+<p><img src="./images/klm_time_D.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="discussion" class="level1">
+<h1>8. Discussion</h1>
+<p>The results show CIOP v1.0 learns to prioritize high-value commands (ls, pwd) while discarding low-value ones. Acceptance rates improve over time, validating the feasibility of real-time cognitive optimization.</p>
+</section>
+<section id="limitations" class="level1">
+<h1>9. Limitations:</h1>
+<ul>
+<li><p>Small action space.</p></li>
+<li><p>Early-stage logging (CLI only).</p></li>
+<li><p>Bandit only; no temporal credit assignment.</p></li>
+</ul>
+</section>
+<section id="roadmap" class="level1">
+<h1>10. Roadmap:</h1>
+<ul>
+<li><p><strong>Meta-agent</strong>: Coordination across multiple agents.</p></li>
+<li><p><strong>JAX</strong> : Use JAX to scale RL architecture.</p></li>
+<li><p><strong>Remote RL Training</strong> : Replace existing pipe for multi-machine/remote training.</p></li>
+<li><p><strong>qSwitch</strong> : Integrate context switcher</p></li>
+<li><p><strong>Integrate with qCAP</strong> - Integrate with <strong>C</strong>ognitive <strong>A</strong>utonomous <strong>P</strong>latform</p></li>
+</ul>
+</section>
+<section id="related-work" class="level1">
+<h1>11. Related Work</h1>
+<ul>
+<li><p>Card, Moran, Newell. The Psychology of Human-Computer Interaction (1983) — Keystroke-Level Model.</p></li>
+<li><p>Auer et al.&nbsp;(2002) — UCB bandits.</p></li>
+<li><p>Langford &amp; Zhang (2008) — Contextual bandits.</p></li>
+<li><p>Productivity research in HCI and intelligent tutoring systems.</p></li>
+</ul>
+</section>
+<section id="conclusion" class="level1">
+<h1>12. Conclusion</h1>
+<p>This paper presents CIOP v1.0, a real-time RL system for cognitive optimization at the CLI. This manuscript demonstrates feasibility, presents early metrics, and lays out the vision for multi-domain expansion. With early testing using Multi-Arm Bandit, I could see reduction upto <span class="math inline">\(\approx 31\%\)</span>.</p>
+<p>I have evaluated per-command time using the <strong>Keystroke-Level Model</strong>. Using conservative constants and compared three cases. For the example sequence, the KLM predicts <b><span class="math inline">\(\approx 11.4s\)</span></b> when typed manually and <b><span class="math inline">\(\approx 7.94s\)</span></b> when the bandit suggests the prefilled commands with a time reduction of <b><span class="math inline">\(\approx 31\%\)</span></b>. A hypothetical composite macro would reduce the time further to <b><span class="math inline">\(\approx6.3s\)</span></b> with <b><span class="math inline">\(\approx 58\%\)</span></b> reduction assuming the same mental effort.</p>
+</section>
+<section id="references" class="level1">
+<h1>13. References</h1>
+<div id="refs" role="list">
+
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

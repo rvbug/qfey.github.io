@@ -8,4 +8,11 @@ about.html
 qscribe/
 shared/
 qfey.github.io.Rproj
-qbits/
+qscribe/*
+qscribe/*
+qscribe-book/*
+qscribe/*
+venv/
+__pycache__/
+qbits/*
+qbits-notes/*

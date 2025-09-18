@@ -1,0 +1,18 @@
+/* Force sidebar sections to be collapsed by default */
+.quarto-sidebar-section > .quarto-sidebar-section-container {
+    display: none;
+}
+
+/* Show container when section is expanded */
+.quarto-sidebar-section.expanded > .quarto-sidebar-section-container {
+    display: block !important;
+}
+
+/* Ensure chevron rotates correctly */
+.quarto-sidebar-section .quarto-sidebar-section-title {
+    cursor: pointer;
+}
+
+.quarto-sidebar-section .quarto-sidebar-section-title::after {
+    transition: transform 0.2s ease;
+}

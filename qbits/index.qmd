@@ -1,7 +1,12 @@
 ---
-title: "qbits"
+title: "Qbits - Blogs"
 ---
 
-This is a Quarto website.
+Coming Soon!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+
+
+
+Built using Quarto.
+

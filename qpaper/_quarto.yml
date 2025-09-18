@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: ../qpapers-published
+
+website:
+  title: "Research Home"
+  description: "Implementation-focused research in RL and Quantum Computing"
+  favicon: images/favicon-32x32.png
+  navbar:
+    left:
+      - text: "QbitAI.in"
+        href: https://qubitai.in
+        target: _blank
+      - text: "Qfey.in"
+        href: https://qfey.in/ciop.html
+        target: _blank
+      - text: "CIOP"
+        menu:
+          - text: "ACON v1.0"
+            href: ResearchPaper.qmd
+       
+format:
+  html:
+    theme: journal
+    toc: true
+    code-fold: false
+  pdf:
+    documentclass: article
+    fontsize: 11pt
+    geometry: margin=1in
+    include-in-header:
+      - text: |
+          \usepackage{amsmath,amsfonts,amssymb}
+          \usepackage{graphicx}

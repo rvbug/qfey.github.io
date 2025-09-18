@@ -1,0 +1,64 @@
+---
+title: "Autonomous Command Optimization Network"
+author: Rakesh Venkat
+date: today
+format: html
+toc: true
+---
+
+## Abstract
+
+I present a learning framework that models command-line usage as a contextual bandit problem. My system, ACON (Autonomous Command Optimization Network), captures real CLI activity using a Rust logger, streams events into a Python-based bandit agent, and integrates with an interactive `fzf` interface for real-time suggestions. This work demonstrates a novel application of contextual bandits for human productivity optimization.
+
+## 1. Introduction
+
+-   CLI is powerful but has steep learning curve.
+-   Existing tools: history, autocomplete, fzf are reactive, not adaptive.
+
+## 2. Motivation
+
+Can we learn *from the user* and *adapt proactively*?
+
+## 3. Contribution:
+
+Bandit-based CLI optimization with real-time interactive feedback.
+
+## 4. Background & Related Work
+
+-   2.1 Command-line productivity challenges
+-   2.2 Reinforcement Learning vs Bandits
+-   2.3 Contextual Bandit formulation
+
+## 3. Problem Formulation
+
+-   Your specific use case
+-   Mathematical formulation
+
+## 4. Methodology
+
+-   Algorithm design
+-   Implementation architecture
+
+## 5. Implementation Details
+
+-   Rust components (with code blocks)
+-   Python AI pipeline
+-   System architecture diagrams
+
+## 6. Experimental Setup
+
+## 7. Results & Analysis
+
+## 8. Discussion & Future Work
+
+-   Limitations of v1.0
+-   Planned improvements for v2.0
+
+## 9. Conclusion
+
+## References
+
+## Appendix (Optional)
+
+-   Additional code snippets
+-   Extended results
