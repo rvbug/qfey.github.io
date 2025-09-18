@@ -3,29 +3,27 @@ title: "Research Papers"
 format: html
 toc: false
 ---
---- 
 
+------------------------------------------------------------------------
 
 # CIOP - Cognitive Interaction Optimization Platform
 
 CIOP consists of two sub projects
 
-## > **Autonomous Command Optimization Network (ACON)**
+## \> **Autonomous Command Optimization Network (ACON)**
 
--   [v1.0 via Multi-Arm Bandit](./acon.qmd) - <b><span style="color:green;"> **Completed**</span>
+-   [v1.0 via Multi-Arm Bandit](./acon.qmd) - <b>[ **Completed**]{style="color:green;"}
 
--   *v2.0: Advanced Reinforcement Learning* - <b><span style="color:maroon;">*In Progress*</span>
+-   *v2.0: Advanced Reinforcement Learning* - <b>[*In Progress*]{style="color:maroon;"}
 
-## > **Cognitive Optimization Workflow Intelligence (CIOW)**
+## \> **Cognitive Optimization Workflow Intelligence (CIOW)**
 
--   **v1.0: Practical Implementation** - <b><span style="color:gray;">Coming Soon</span>
+-   **v1.0: Practical Implementation** - <b>[Coming Soon]{style="color:gray;"}
 
 <br>
 
+------------------------------------------------------------------------
 
----
+# Quantum Spacetime Intelligence System (QSIS)
 
-# Quantum Spacetime Intelligence Platform (QSIP)
-
--   **v1.0:** <b><span style="color:maroon;">*In Progress*</span>
-
+-   **v1.0:** <b>[*In Progress*]{style="color:maroon;"}
