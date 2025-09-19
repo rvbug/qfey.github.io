@@ -8,42 +8,42 @@ format: html
 
 # Abstract
 
-Large Language Models and automation frameworks have enabled new forms of productivity, but they rarely optimize the *cognitive effort* of individual users in real time. I introduce **Cognitive Interaction Optimization Platform (CIOP)**, a multi-domain **Reinforcement Learning (RL)** framework designed to optimize human-computer interaction in real time. This is composed of domain-specific RL agents each focusing on a unique aspect of efficency like like **Cognitive Intelligence** and **Real-time Adaptation**. 
+Large Language Models and automation frameworks have enabled new forms of productivity, but they rarely optimize the *cognitive effort* of individual users in real time. I introduce **Cognitive Interaction Optimization Platform (CIOP)**, a multi-domain **Reinforcement Learning (RL)** framework designed to optimize human-computer interaction in real time. This is composed of domain-specific RL agents each focusing on a unique aspect of efficency like **Cognitive Intelligence** and **Real-time Adaptation**. 
 
 This framework had two sub components:
 
 - [ ] **Autonmous Command Optimization Network (ACON)**
 - [ ] **Cognitive Optimization Workflow Intelligence (COWI)**
 
-This manuscript focuses on version 1.0 of **Autonmous Command Optimization Network (ACON)** which captures real-time user behavior, suggests optimized actions, and adapts continuously. Initial results show that ACON reduces keystrokes and mental operations, aligning with the *Keystroke-Level Model (KLM)*. I presents an early version of the platform, with code snippets, metrics, and a roadmap towards multi-domain cognitive optimization. The version (1.0) focuses on **Multi-Armed Bandit Reinforcement Learning**
+This manuscript focuses on version 1.0 of **Autonmous Command Optimization Network (ACON)** which captures real-time user behavior, suggests optimized actions, and adapts continuously. Initial results show that ACON reduces keystrokes and mental operations, aligning with the *Keystroke-Level Model (KLM)*. I presents an early version of the platform, with code snippets, metrics, and a roadmap towards multi-domain cognitive optimization. This version (1.0) focuses on **Multi-Armed Bandit Reinforcement Learning**
 
 
 # 1. Introduction
 
 Modern AI tools prioritize automation but they overlook micro-level user interactions. In practice, productivity is often bottlenecked by repetitive keystrokes, redundant commands, or inefficient workflows. In the age of Agentic AI, there remains a need for systems that **directly optimize user cognition and interaction flows**.
 
-I propose **Autonmous Command Optimization Network (ACON)** — a *__Reinforcement Learning (RL)__* driven platform to optimize productivity through **real-time adaptation**. This version targets the CLI which is chosen for its structured yet open-ended action space. While LLMs focus on semantic reasoning, ACON specifically addresses *interaction efficiency*.
+I propose **Autonmous Command Optimization Network (ACON)** — a *__Reinforcement Learning (RL)__* driven platform to optimize productivity through **real-time adaptation**. This version targets the CLI which is chosen for its structured yet open-ended action space. While LLMs focus on semantic reasoning, ACON specifically addresses **interaction efficiency**.
 
 
 # 2. Keystroke-Level Model
 
-KLM is a classic model from **Human-Computer Interaction (HCL)** research that estimates tasks' time based on the keystrokes, mental operations and system responses. CIOP v1.0 adopts KLM as baseline to quantify reductions in command line cognitive load.
+KLM is a classic model from **Human-Computer Interaction (HCL)** research that estimates tasks' time based on the keystrokes, mental operations and system responses. ACON v1.0 adopts KLM as baseline to quantify reductions in command line cognitive load.
 
-KLM predicts how long a user will take to complete a routine task without errors and is based on the family of **Goals, Operators Methods Selection (GOMS)** model
+KLM predicts how long a user will take to complete a routine task without errors and is based on the family of **Goals, Operators, Methods, Selection known as GOMS ** model
 
 ## 2.1 KLM Basics
 
-KLM proposes following six operations. For this version of ACON, we will be disregarding the *pointing devices* and consider that only keyboard is the input device.
+KLM proposes six operations. For this version of ACON, we will be disregarding the *pointing devices* and consider that  keyboard is the only input device.
 
 - [ ] *K* - Keystroke
-- [ ] *H* - Homing hands on keyboard
 - [ ] *M* - Mental preparation for action and decision making
 - [ ] *R* - System response time. This is unique to the system 
 
 Each of the elements has a time associated with it. This paper considers
  
  * **K** -  Keystroke by an average typist is $\approx 40 wpm$ is 0.28s   
- * **M** -  Mental preparation would be $\approx 1.35s$  
+ * **M** -  Mental preparation would be $\approx 1.2s$  
+ * **R** - Response time would be $\approx 0.3s$
  
 **Keystroke-Level Model (KLM)** estimates task time as:
 

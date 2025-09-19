@@ -311,29 +311,28 @@ window.Quarto = {
 
 <section id="abstract" class="level1">
 <h1>Abstract</h1>
-<p>Large Language Models and automation frameworks have enabled new forms of productivity, but they rarely optimize the <em>cognitive effort</em> of individual users in real time. I introduce <strong>Cognitive Interaction Optimization Platform (CIOP)</strong>, a multi-domain <strong>Reinforcement Learning (RL)</strong> framework designed to optimize human-computer interaction in real time. This is composed of domain-specific RL agents each focusing on a unique aspect of efficency like like <strong>Cognitive Intelligence</strong> and <strong>Real-time Adaptation</strong>.</p>
+<p>Large Language Models and automation frameworks have enabled new forms of productivity, but they rarely optimize the <em>cognitive effort</em> of individual users in real time. I introduce <strong>Cognitive Interaction Optimization Platform (CIOP)</strong>, a multi-domain <strong>Reinforcement Learning (RL)</strong> framework designed to optimize human-computer interaction in real time. This is composed of domain-specific RL agents each focusing on a unique aspect of efficency like <strong>Cognitive Intelligence</strong> and <strong>Real-time Adaptation</strong>.</p>
 <p>This framework had two sub components:</p>
 <ul class="task-list">
 <li><label><input type="checkbox"><strong>Autonmous Command Optimization Network (ACON)</strong></label></li>
 <li><label><input type="checkbox"><strong>Cognitive Optimization Workflow Intelligence (COWI)</strong></label></li>
 </ul>
-<p>This manuscript focuses on version 1.0 of <strong>Autonmous Command Optimization Network (ACON)</strong> which captures real-time user behavior, suggests optimized actions, and adapts continuously. Initial results show that ACON reduces keystrokes and mental operations, aligning with the <em>Keystroke-Level Model (KLM)</em>. I presents an early version of the platform, with code snippets, metrics, and a roadmap towards multi-domain cognitive optimization. The version (1.0) focuses on <strong>Multi-Armed Bandit Reinforcement Learning</strong></p>
+<p>This manuscript focuses on version 1.0 of <strong>Autonmous Command Optimization Network (ACON)</strong> which captures real-time user behavior, suggests optimized actions, and adapts continuously. Initial results show that ACON reduces keystrokes and mental operations, aligning with the <em>Keystroke-Level Model (KLM)</em>. I presents an early version of the platform, with code snippets, metrics, and a roadmap towards multi-domain cognitive optimization. This version (1.0) focuses on <strong>Multi-Armed Bandit Reinforcement Learning</strong></p>
 </section>
 <section id="introduction" class="level1">
 <h1>1. Introduction</h1>
 <p>Modern AI tools prioritize automation but they overlook micro-level user interactions. In practice, productivity is often bottlenecked by repetitive keystrokes, redundant commands, or inefficient workflows. In the age of Agentic AI, there remains a need for systems that <strong>directly optimize user cognition and interaction flows</strong>.</p>
-<p>I propose <strong>Autonmous Command Optimization Network (ACON)</strong> — a <em><strong>Reinforcement Learning (RL)</strong></em> driven platform to optimize productivity through <strong>real-time adaptation</strong>. This version targets the CLI which is chosen for its structured yet open-ended action space. While LLMs focus on semantic reasoning, ACON specifically addresses <em>interaction efficiency</em>.</p>
+<p>I propose <strong>Autonmous Command Optimization Network (ACON)</strong> — a <em><strong>Reinforcement Learning (RL)</strong></em> driven platform to optimize productivity through <strong>real-time adaptation</strong>. This version targets the CLI which is chosen for its structured yet open-ended action space. While LLMs focus on semantic reasoning, ACON specifically addresses <strong>interaction efficiency</strong>.</p>
 </section>
 <section id="keystroke-level-model" class="level1">
 <h1>2. Keystroke-Level Model</h1>
-<p>KLM is a classic model from <strong>Human-Computer Interaction (HCL)</strong> research that estimates tasks’ time based on the keystrokes, mental operations and system responses. CIOP v1.0 adopts KLM as baseline to quantify reductions in command line cognitive load.</p>
-<p>KLM predicts how long a user will take to complete a routine task without errors and is based on the family of <strong>Goals, Operators Methods Selection (GOMS)</strong> model</p>
+<p>KLM is a classic model from <strong>Human-Computer Interaction (HCL)</strong> research that estimates tasks’ time based on the keystrokes, mental operations and system responses. ACON v1.0 adopts KLM as baseline to quantify reductions in command line cognitive load.</p>
+<p>KLM predicts how long a user will take to complete a routine task without errors and is based on the family of <strong>Goals, Operators, Methods, Selection known as GOMS </strong> model</p>
 <section id="klm-basics" class="level2">
 <h2 class="anchored" data-anchor-id="klm-basics">2.1 KLM Basics</h2>
-<p>KLM proposes following six operations. For this version of ACON, we will be disregarding the <em>pointing devices</em> and consider that only keyboard is the input device.</p>
+<p>KLM proposes six operations. For this version of ACON, we will be disregarding the <em>pointing devices</em> and consider that keyboard is the only input device.</p>
 <ul class="task-list">
 <li><label><input type="checkbox"><em>K</em> - Keystroke</label></li>
-<li><label><input type="checkbox"><em>H</em> - Homing hands on keyboard</label></li>
 <li><label><input type="checkbox"><em>M</em> - Mental preparation for action and decision making</label></li>
 <li><label><input type="checkbox"><em>R</em> - System response time. This is unique to the system</label></li>
 </ul>
@@ -341,7 +340,9 @@ window.Quarto = {
 <ul>
 <li><strong>K</strong> - Keystroke by an average typist is <span class="math inline">\(\approx 40 wpm\)</span> is 0.28s<br>
 </li>
-<li><strong>M</strong> - Mental preparation would be <span class="math inline">\(\approx 1.35s\)</span></li>
+<li><strong>M</strong> - Mental preparation would be <span class="math inline">\(\approx 1.2s\)</span><br>
+</li>
+<li><strong>R</strong> - Response time would be <span class="math inline">\(\approx 0.3s\)</span></li>
 </ul>
 <p><strong>Keystroke-Level Model (KLM)</strong> estimates task time as:</p>
 <p><span class="math display">\[Total ​= \sum(nk​⋅tk​)+∑(nm​⋅tm​)+∑(nr​⋅tr​)\]</span></p>
