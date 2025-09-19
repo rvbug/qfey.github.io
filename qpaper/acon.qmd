@@ -235,7 +235,7 @@ sequenceDiagram
 
 # 5.Future direction:
 
-While v1.0 focuses on single-command preference learning, later versions of CIOP will extend to composite actions or macros. For example, instead of issuing cd, ls, and vim separately, CIOP could propose a macro such as:
+While v1.0 focuses on single-command preference learning, later versions of CIOP will extend to composite actions or macros. For example, instead of issuing cd, ls, and nvim separately, CIOP could propose a macro such as:
 
 ``` bash
 ciop-open main.rs   # hypothetical composite command
@@ -436,7 +436,7 @@ I have evaluated CIOP using metrics logged during live CLI sessions.
 
 ## 7.1   Real-time Rust TUI
 
-This is a real time metrics run using 
+Real time metrics are captured by running
 
 ```bash
 $> ciop --metrics
@@ -560,7 +560,7 @@ num_suggestions     : 30
 
 ## 7.13 Final Calculations 
 
-Based on the above examples, here's the table showing the Scenarios vs savings. 
+Here is the table showing the Scenarios vs Savings for limited action space. 
 
 ```markdown
 
@@ -575,7 +575,7 @@ Based on the above examples, here's the table showing the Scenarios vs savings.
 
 # 8. Discussion
 
-The results show CIOP v1.0 learns to prioritize high-value commands (ls, pwd) while discarding low-value ones. Acceptance rates improve over time, validating the feasibility of real-time cognitive optimization.
+The results show ACON v1.0 learns to prioritize high-value commands (ls, pwd) while discarding low-value ones. Acceptance rates improve over time, validating the feasibility of real-time cognitive optimization.
 
 # 9. Limitations:
 
@@ -593,9 +593,9 @@ The results show CIOP v1.0 learns to prioritize high-value commands (ls, pwd) wh
 
 -   **Remote RL Training** : Replace existing pipe for multi-machine/remote training.
 
--   **qSwitch** : Integrate context switcher
+-   **qSwitch** : Integrate with my context switcher project
 
--   **Integrate with qCAP** - Integrate with **C**ognitive **A**utonomous **P**latform
+-   **Integrate with qCAP** - Integrate with my **C**ognitive **A**utonomous **P**latform
 
 
 # 11. Related Work

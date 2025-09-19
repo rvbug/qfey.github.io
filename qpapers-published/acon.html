@@ -552,7 +552,7 @@ Note
 </section>
 <section id="future-direction" class="level1">
 <h1>5.Future direction:</h1>
-<p>While v1.0 focuses on single-command preference learning, later versions of CIOP will extend to composite actions or macros. For example, instead of issuing cd, ls, and vim separately, CIOP could propose a macro such as:</p>
+<p>While v1.0 focuses on single-command preference learning, later versions of CIOP will extend to composite actions or macros. For example, instead of issuing cd, ls, and nvim separately, CIOP could propose a macro such as:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ciop-open</span> main.rs   <span class="co"># hypothetical composite command</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This requires:</p>
 <ul>
@@ -732,7 +732,7 @@ Note
 <p>I have evaluated CIOP using metrics logged during live CLI sessions.</p>
 <section id="real-time-rust-tui" class="level2">
 <h2 class="anchored" data-anchor-id="real-time-rust-tui">7.1 Real-time Rust TUI</h2>
-<p>This is a real time metrics run using</p>
+<p>Real time metrics are captured by running</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span><span class="op">&gt;</span> ciop <span class="ex">--metrics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>┌ Info ───────────────────────────────────────────────────────────────────────┐</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>│Metrics viewer (press 'q' to quit, 'r' to reset)                             │</span>
@@ -840,7 +840,7 @@ Note
 </section>
 <section id="final-calculations" class="level2">
 <h2 class="anchored" data-anchor-id="final-calculations">7.13 Final Calculations</h2>
-<p>Based on the above examples, here’s the table showing the Scenarios vs savings.</p>
+<p>Here is the table showing the Scenarios vs Savings for limited action space.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Scenarios         <span class="pp">|</span> k  <span class="pp">|</span> n <span class="pp">|</span> m <span class="pp">|</span> Time (s) <span class="pp">|</span> Savings <span class="pp">|</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------------------|----|---|---|----------|---------|</span></span>
@@ -851,7 +851,7 @@ Note
 </section>
 <section id="discussion" class="level1">
 <h1>8. Discussion</h1>
-<p>The results show CIOP v1.0 learns to prioritize high-value commands (ls, pwd) while discarding low-value ones. Acceptance rates improve over time, validating the feasibility of real-time cognitive optimization.</p>
+<p>The results show ACON v1.0 learns to prioritize high-value commands (ls, pwd) while discarding low-value ones. Acceptance rates improve over time, validating the feasibility of real-time cognitive optimization.</p>
 </section>
 <section id="limitations" class="level1">
 <h1>9. Limitations:</h1>
@@ -867,8 +867,8 @@ Note
 <li><p><strong>Meta-agent</strong>: Coordination across multiple agents.</p></li>
 <li><p><strong>JAX</strong> : Use JAX to scale RL architecture.</p></li>
 <li><p><strong>Remote RL Training</strong> : Replace existing pipe for multi-machine/remote training.</p></li>
-<li><p><strong>qSwitch</strong> : Integrate context switcher</p></li>
-<li><p><strong>Integrate with qCAP</strong> - Integrate with <strong>C</strong>ognitive <strong>A</strong>utonomous <strong>P</strong>latform</p></li>
+<li><p><strong>qSwitch</strong> : Integrate with my context switcher project</p></li>
+<li><p><strong>Integrate with qCAP</strong> - Integrate with my <strong>C</strong>ognitive <strong>A</strong>utonomous <strong>P</strong>latform</p></li>
 </ul>
 </section>
 <section id="related-work" class="level1">
