@@ -4,7 +4,7 @@
     "href": "index.html#autonomous-command-optimization-network-acon",
     "title": "Research Papers",
     "section": "> Autonomous Command Optimization Network (ACON)",
-    "text": "&gt; Autonomous Command Optimization Network (ACON)\n\nv1.0 via Multi-Arm Bandit -  Completed\nv2.0: Advanced Reinforcement Learning - In Progress"
+    "text": "&gt; Autonomous Command Optimization Network (ACON)\n\nv1.0 via Multi-Arm Bandit - Completed\nv2.0: Advanced Reinforcement Learning - In Progress"
   },
   {
     "objectID": "index.html#cognitive-optimization-workflow-intelligence-ciow",
@@ -203,6 +203,13 @@
     "text": "7.12 KLM Daily"
   },
   {
+    "objectID": "acon.html#final-calculations",
+    "href": "acon.html#final-calculations",
+    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
+    "section": "7.13 Final Calculations",
+    "text": "7.13 Final Calculations\nBased on the above examples, here’s the table showing the Scenarios vs savings.\n\n| Scenarios         | k  | n | m | Time (s) | Savings |\n|-------------------|----|---|---|----------|---------|\n| Manual            | 29 | 2 | 3 | 11.4     | -       | \n| Bandit suggestion | 23 | 1 | 1 | 7.9      | 31%     | \n| Future composite  | 17 | 1 | 1 | 6.2      | 58%     |"
+  },
+  {
     "objectID": "ciop-v1/Overview.html",
     "href": "ciop-v1/Overview.html",
     "title": "qpaper",
@@ -327,19 +334,5 @@
     "title": "Research Home",
     "section": "",
     "text": "Metric\nValue\n\n\n\n\nTotal Seen\n66\n\n\nTotal Accepted\n6\n\n\nAcceptance Rate (%)\n9.09\n\n\nUnique Actions\n12"
-  },
-  {
-    "objectID": "acon.html#klm",
-    "href": "acon.html#klm",
-    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.13 KLM",
-    "text": "7.13 KLM\n\n| Scenarios         | k  | n | m | Time (s) | Calculations              |\n|-------------------|----|---|---|----------|---------------------------|\n| Manual            | 29 | 2 | 3 | 11.4     | 29×0.28+1×1.2+3×0.3=10.22 | \n| Bandit suggestion | 23 | 1 | 1 | 7.9      | 23×0.28+1×1.2+1×0.3=7.94  | \n| Future composite  | 17 | 1 | 1 | 6.2      | 17×0.28+1×1.2+0.3=6.2     |"
-  },
-  {
-    "objectID": "acon.html#final-calculations",
-    "href": "acon.html#final-calculations",
-    "title": "Multi-Domain Cognitive Optimization via Real-Time Reinforcement Learning",
-    "section": "7.13 Final Calculations",
-    "text": "7.13 Final Calculations\nBased on the above examples, here’s the table showing the Scenarios vs savings.\n\n| Scenarios         | k  | n | m | Time (s) | Savings |\n|-------------------|----|---|---|----------|---------|\n| Manual            | 29 | 2 | 3 | 11.4     | -       | \n| Bandit suggestion | 23 | 1 | 1 | 7.9      | 31%     | \n| Future composite  | 17 | 1 | 1 | 6.2      | 58%     |"
   }
 ]
