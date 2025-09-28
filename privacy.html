@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-32x32.png">
+    <title>Privacy Policy - QFEY</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --primary: rgb(0, 110, 255);
+            --secondary: #07f1a3;
+            --background: #080808;
+            --surface: #121212;
+            --text: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            background-color: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.8rem 2rem;
+            box-shadow: 0 5px 20px rgba(0, 238, 255, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.1rem;
+        }
+
+        .logo-symbol {
+            height: 2.5rem;
+            width: 2.5rem;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-symbol::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, var(--primary) 0%, transparent 70%);
+            opacity: 0.3;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.6;
+            }
+            100% {
+                transform: scale(0.8);
+                opacity: 0.3;
+            }
+        }
+
+        .nav-items {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-item {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.06rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+
+        .nav-item:hover::after {
+            width: 100%;
+        }
+
+        .nav-item:hover {
+            color: var(--primary);
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .main-content {
+            flex: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 2rem 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.5rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #ffffff;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        .philosophy {
+            background: rgba(0, 110, 255, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .philosophy h2 {
+            border: none;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .no-collect {
+            background: rgba(255, 0, 100, 0.1);
+            border-left: 4px solid #ff0064;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .yes-collect {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+
+        .quote {
+            background: rgba(0, 110, 255, 0.05);
+            border: 1px solid var(--primary);
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            border-radius: 12px;
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .important {
+            background: rgba(0, 110, 255, 0.15);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--primary);
+            margin: 1rem 0;
+        }
+
+        .footer {
+            background-color: #010000;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .policy-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-link {
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: var(--text);
+            opacity: 0.7;
+        }
+
+        @media (max-width: 915px) {
+            .nav-items {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: var(--surface);
+                padding: 1rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                gap: 1rem;
+            }
+
+            .nav-items.show {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .philosophy {
+                padding: 1.5rem;
+            }
+
+            .main-content {
+                padding: 100px 1rem 2rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .policy-links {
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .menu-icon {
+                display: none;
+            }
+        }
+
+        /* Social icons styling */
+        .social-links .footer-link {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-links .footer-link:hover {
+            color: var(--primary);
+            background-color: rgba(0, 110, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Keep policy links as text */
+        .policy-links .footer-link {
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="./index.html" class="logo-link">
+                <div class="logo">
+                    <div class="logo-symbol">
+                        <i class="fas fa-atom" style="color: var(--primary);"></i>
+                    </div>
+                    <div class="logo-text">QFEY</div>
+                </div>
+            </a>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-items">
+                <a href="./index.html" class="nav-item">Home</a> 
+                <a href="https://qubitai.in" class="nav-item" target="_blank">QuBitAi</a>
+                <a href="./qresearch.html" class="nav-item">Quantum Research</a>
+                <a href="./ciop.html" class="nav-item">CIOP</a>
+                <a href="/qpapers-published/" class="nav-item">QPapers</a>
+                <!-- <a href="https://qubitai.in/#footer" class="nav-item" target="_blank">Connect</a> -->
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated"><em>Last updated: [Date]</em></p>
+
+            <div class="philosophy">
+                <h2>Philosophy</h2>
+                <p><span class="highlight">Privacy is a fundamental right, not a privilege.</span> At qfey.in, I am committed to protecting your privacy and maintaining your digital autonomy. I believe in radical transparency about data practices.</p>
+            </div>
+
+            <h2>What I DON'T Collect</h2>
+            <div class="no-collect">
+                <ul>
+                    <li><strong>No personal information</strong> (names, emails, addresses)</li>
+                    <li><strong>No behavioral tracking</strong> across websites</li>
+                    <li><strong>No user profiles or accounts</strong></li>
+                    <li><strong>No cookies</strong> for tracking purposes</li>
+                    <li><strong>No third-party advertising networks</strong></li>
+                    <li><strong>No social media pixels or trackers</strong></li>
+                </ul>
+            </div>
+
+            <h2>What I DO Collect</h2>
+            <div class="yes-collect">
+                <h3><span class="highlight">Minimal Analytics Only:</span></h3>
+                <p>I use privacy-respecting analytics to understand basic website usage:</p>
+                <ul>
+                    <li>Page views</li>  
+                    <li>Visit counts</li>
+                    <!-- <li>General geographic region (country/state level only)</li>
+                    <li>Referring websites</li> -->
+                    <!-- <li>Device type (desktop/mobile)</li> -->
+                </ul>
+            </div>
+
+            <div class="important">
+                <p><strong>Important:</strong> This data is:</p>
+                <ul>
+                    <li>Aggregated and anonymous</li>
+                    <li>Cannot be linked to individual users</li>
+                    <li>Used solely to improve content and site performance</li>
+                    <li>Never shared with third parties</li>
+                    <li>Never sold or monetized</li>
+                </ul>
+            </div>
+
+            <h2>Your Rights</h2>
+            <ul>
+                <li><span class="highlight">Right to Privacy:</span> You browse this site anonymously by default</li>
+                <li><span class="highlight">Right to Transparency:</span> This policy explains everything we track</li>
+                <li><span class="highlight">Right to Contact:</span> Reach out if you have privacy concerns</li>
+            </ul>
+
+            <h2>Technical Details</h2>
+            <ul>
+                <li>No cookies are placed on your device</li>
+                <li>No JavaScript tracking scripts beyond basic analytics</li>
+                <li>SSL/TLS encryption for all connections</li>
+                <li>No user data stored in databases</li>
+            </ul>
+
+            <h2>Changes to This Policy</h2>
+            <p>Any changes to this privacy policy will be posted here with an updated date. I will never weaken privacy protections without clear notice.</p>
+
+            <h2>Contact</h2>
+            <p>If you have any questions about this privacy policy or data practices, please contact me through the methods listed on the website.</p>
+
+            <div class="quote">
+                <p>Privacy means people know what they're signing up for, in plain English, and repeatedly - Steve Jobs.</p>
+                <p>This principle guides everything @ qfey.in</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <div class="social-links">
+                    <a href="https://github.com/rvbug" target="_blank" rel="noopener noreferrer" class="footer-link">
+                     <i class="fab fa-github"></i>  
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="footer-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:qfey@icloud.com" class="footer-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="policy-links">
+                    <a href="./privacy.html" class="footer-link">Privacy Policy</a>
+                    <a href="./tos.html" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+            <p class="copyright">© 2025 QFEY, A <a href="https://qubitai.in/" target="_blank" class="footer-link">QubitAI</a> Creation. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuIcon = document.querySelector('.menu-icon');
+        const navItems = document.querySelector('.nav-items');
+
+        menuIcon.addEventListener('click', () => {
+            navItems.classList.toggle('show');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
