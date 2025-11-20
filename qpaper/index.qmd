@@ -8,22 +8,33 @@ toc: false
 
 # CIOP - Cognitive Interaction Optimization Platform
 
-CIOP consists of two sub projects
+<!-- CIOP consists of two sub projects -->
 
-## \> **Autonomous Command Optimization Network (ACON)**
+# \> **Autonomous Command Optimization Network (ACON)**
 
 -   [v1.0 via Multi-Arm Bandit](./acon.qmd) - <b>[**Completed**]{style="color:green;"}
 
--   *v2.0: Advanced Reinforcement Learning* - <b>[*In Progress*]{style="color:maroon;"}
 
-## \> **Cognitive Optimization Workflow Intelligence (CIOW)**
+<br>
+<br>
 
--   **v1.0: Practical Implementation** - <b>[Coming Soon]{style="color:gray;"}
+
+
+# \> **QPulse** - A context-aware system 
+-   **v1.0: Implementation** - <b>[*In Progress*]{style="color:red;"}
+
+<br>
+<br>
+
+
+
+# \> **Cognitive Optimization Workflow Intelligence (CIOW)**
+
+-   **v1.0: Practical Implementation** - <b>[*Coming Soon*]{style="color:gray;"}
+
 
 <br>
 
-------------------------------------------------------------------------
-
 # Quantum Spacetime Intelligence System (QSIS)
 
--   **v1.0:** <b>[*In Progress*]{style="color:maroon;"}
+-   **v1.0:** <b>[*Coming Soon*]{style="color:gray;"}
